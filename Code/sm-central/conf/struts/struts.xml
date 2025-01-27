@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+
+    <package name="reference" namespace="/ref" extends="struts-default">
+        <action name="ref" class="com.salesmanager.central.ref.RefAction" method="prepare">
+			<result>/ref/regions.jsp</result>
+        </action>
+    </package>
+
+
+
+
+
+
+
+
+
+    <package name="default" extends="struts-default">
+	    <interceptors>
+	      <interceptor-stack name="smStack">
+	        <interceptor-ref name="defaultStack"/>
+	      </interceptor-stack>
+	    </interceptors>
+	    <default-interceptor-ref name="smStack"/>
+	  </package>
+
+
+
+    <!-- Configuration for the profile package. -->
+    <package name="profile" namespace="/profile" extends="struts-default">
+
+
+		<default-action-ref name="dashboard" />
+
+        <!--  Main 	Entry Point -->
+        <action name="logon" class="com.salesmanager.central.profile.ProfileLogonAction" method="logon">
+            <result name="success">/dashboard/dashboard.jsp</result>
+            <!--  Should use forward-action -->
+            <result name="complete-store" type="redirectAction">store</result>
+            <result name="CREDENTIALSERROR">/profile/logout.jsp</result>
+        </action>
+
+        <action name="logout" class="com.salesmanager.central.profile.ProfileLogonAction" method="logout">
+            <result name="success">/profile/logout.jsp</result>
+        </action>
+
+        <!-- Central landing page -->
+        <action name="dashboard" class="com.salesmanager.central.profile.ProfileLogonAction" method="display">
+            <result name="success">/dashboard/dashboard.jsp</result>
+            <!--  Should use forward-action -->
+            <result name="complete-store" type="redirectAction">store</result>
+        </action>
+
+
+        <!--  Store Information completion form -->
+        <action name="store" class="com.salesmanager.central.profile.StoreAction" method="display">
+            <result name="success">/profile/store.jsp</result>
+            <result name="input">/profile/store.jsp</result>
+        </action>
+
+
+        <action name="savestore" class="com.salesmanager.central.profile.StoreAction" method="saveStore">
+            <result name="input">/profile/store.jsp</result>
+            <result name="success">/profile/store.jsp</result>
+        </action>
+        
+        <action name="saveStoreTemplate" class="com.salesmanager.central.profile.StoreAction" method="saveTemplateModule">
+            <result name="input">/profile/store.jsp</result>
+            <result name="success">/profile/store.jsp</result>
+        </action>
+        
+        <!-- Change Languege -->
+        <action name="changeLanguage" class="com.salesmanager.central.profile.ProfileAction" method="changeLanguage">
+            <result name="success" type="redirectAction">dashboard</result>
+        </action>
+
+
+        <!-- User profile & billing information -->
+        <action name="profile" class="com.salesmanager.central.profile.ProfileAction" method="display">
+            <result name="success">profile.jsp</result>
+            <result name="input">profile.jsp</result>
+            <result name="error">/jsp/error.jsp</result>
+        </action>
+
+        <action name="saveprofile" class="com.salesmanager.central.profile.ProfileAction" method="saveProfile">
+            <result name="input">/profile/profile.jsp</result>
+            <result name="success">profile.jsp</result>
+            <result name="error">/jsp/error.jsp</result>
+        </action>
+        
+        <action name="displayPassword" class="com.salesmanager.central.profile.ProfileAction" method="displayPassword">
+            <result name="success">/profile/password.jsp</result>
+        </action>
+        
+        <action name="savePassword" class="com.salesmanager.central.profile.ProfileAction" method="changePassword">
+            <result name="input">/profile/password.jsp</result>
+            <result name="success">/profile/password.jsp</result>
+        </action>
+        
+
+   
+    </package>
+
+    <package name="merchantstore" namespace="/merchantstore" extends="struts-default">
+    	 
+    	 <default-action-ref name="storeFront" />
+    	 
+    	 
+    	 
+    	 <action name="editmerchantstore" class="com.salesmanager.central.merchantstore.MerchantStoreAction" method="fetchMerchantStore">
+            <result name="success">editmerchantstore.jsp</result>
+            <result name="input">editmerchantstore.jsp</result>
+            <result name="error">editmerchantstore.jsp</result>
+            <result name="unauthorized" type="redirectAction">storeFront</result>
+        </action>
+
+     	 <action name="saveMerchantStore" class="com.salesmanager.central.merchantstore.MerchantStoreAction" method="saveMerchantStore">
+            <result name="success">editmerchantstore.jsp</result>
+            <result name="input">editmerchantstore.jsp</result>
+            <result name="error">editmerchantstore.jsp</result>
+            <result name="unauthorized" type="redirectAction">storeFront</result>
+        </action>
+
+      	 <action name="deleteMerchantStore" class="com.salesmanager.central.merchantstore.MerchantStoreAction" method="deleteMerchant">
+            <result name="success" type="redirectAction">viewMerchantStores</result>
+            <result name="input">editmerchantstore.jsp</result>
+            <result name="error" type="redirectAction">viewMerchantStores</result>
+            <result name="unauthorized" type="redirectAction">storeFront</result>
+        </action>
+
+        <action name="viewMerchantStores" class="com.salesmanager.central.merchantstore.MerchantStoreAction" method="viewMerchantStores">
+            <result name="success">viewmerchantstore.jsp</result>
+        </action>
+
+
+        <action name="storeFront" class="com.salesmanager.central.merchantstore.StoreFrontAction" method="displayStoreFrontConfig">
+            <result name="success">storefront.jsp</result>
+        </action>
+        
+        <!-- Store front portlets -->
+        <action name="storeFrontPortlets" class="com.salesmanager.central.merchantstore.StoreFrontPortletsAction" method="display">
+			<result>portlets.jsp</result>
+			<result name="input">portlets.jsp</result>
+		</action>
+
+        <action name="saveStoreFrontPortlets" class="com.salesmanager.central.merchantstore.StoreFrontPortletsAction" method="save">
+			<result>portlets.jsp</result>
+			<result name="input">portlets.jsp</result>
+		</action>
+		
+	    <action name="updateCustomPortletsList" class="com.salesmanager.central.merchantstore.StoreFrontPortletsAction" method="saveCustomPortlets">
+			<result name="success">portlets.jsp</result>
+			<result name="input">portlets.jsp</result>
+		</action>
+		
+		<action name="customPortletDetails" class="com.salesmanager.central.merchantstore.StoreFrontPortletsAction" method="customPortletsDetails">
+			<result>customPortletDetails.jsp</result>
+			<result name="input">portlets.jsp</result>
+		</action>
+		
+		<action name="deleteCustomPortlet" class="com.salesmanager.central.merchantstore.StoreFrontPortletsAction" method="deleteCustomPortlet">
+			<result name="success">portlets.jsp</result>
+		</action>
+		
+		<action name="savePortlet" class="com.salesmanager.central.merchantstore.StoreFrontPortletsAction" method="savePortlet">
+			<result>customPortletDetails.jsp</result>
+			<result name="input">customPortletDetails.jsp</result>
+		</action>
+        
+        
+        <!-- Contact us -->
+        <action name="contactUs" class="com.salesmanager.central.merchantstore.ContactUsConfigurationAction" method="display">
+			<result>contactus.jsp</result>
+			<result name="input">contactus.jsp</result>
+		</action>
+		
+		<action name="saveContactUs" class="com.salesmanager.central.merchantstore.ContactUsConfigurationAction" method="save">
+			<result>contactus.jsp</result>
+			<result name="input">contactus.jsp</result>
+		</action>
+
+        <action name="editStoreConfiguration" class="com.salesmanager.central.merchantstore.StoreFrontAction" method="editStoreFontConfig">
+            <result name="success">storefront.jsp</result>
+            <result name="input">storefront.jsp</result>
+        </action>
+        
+        <!-- Store Front Pages -->
+        <action name="storePageList" class="com.salesmanager.central.merchantstore.StoreFrontPagesAction" method="displayList">
+			<result name="success">storePageList.jsp</result>
+			<result name="input">storePageList.jsp</result>
+		</action>
+		
+		<action name="updateStorePageList" class="com.salesmanager.central.merchantstore.StoreFrontPagesAction" method="saveList">
+			<result name="success">storePageList.jsp</result>
+			<result name="input">storePageList.jsp</result>
+		</action>
+		
+		<action name="storePageDetails" class="com.salesmanager.central.merchantstore.StoreFrontPagesAction" method="displayDetails">
+			<result name="success">storePageDetails.jsp</result>
+			<result name="input">storePageDetails.jsp</result>
+		</action>
+		
+		<action name="deletePage" class="com.salesmanager.central.merchantstore.StoreFrontPagesAction" method="delete">
+			<result name="success">storePageList.jsp</result>
+		</action>
+		
+		<action name="savePage" class="com.salesmanager.central.merchantstore.StoreFrontPagesAction" method="save">
+			<result name="success">storePageDetails.jsp</result>
+		</action>
+		
+		
+		<!-- Content section -->
+        <action name="pageContentList" class="com.salesmanager.central.merchantstore.StoreFrontContentAction" method="displayList">
+			<result name="success">pageContentList.jsp</result>
+			<result name="input">pageContentList.jsp</result>
+		</action>
+		
+		<action name="updatePageContentList" class="com.salesmanager.central.merchantstore.StoreFrontContentAction" method="saveList">
+			<result name="success">pageContentList.jsp</result>
+			<result name="input">pageContentList.jsp</result>
+		</action>
+		
+		<action name="pageContentDetails" class="com.salesmanager.central.merchantstore.StoreFrontContentAction" method="displayDetails">
+			<result name="success">pageContentDetails.jsp</result>
+			<result name="input">pageContentDetails.jsp</result>
+		</action>
+		
+		<action name="deletePageContent" class="com.salesmanager.central.merchantstore.StoreFrontContentAction" method="delete">
+			<result name="success">pageContentList.jsp</result>
+		</action>
+		
+		<action name="savePageContent" class="com.salesmanager.central.merchantstore.StoreFrontContentAction" method="save">
+			<result name="success">pageContentDetails.jsp</result>
+		</action>
+		
+		
+		
+		<!-- Media Bin -->
+		<action name="displayFileBrowser" class="com.salesmanager.central.merchantstore.BinUploadAction" method ="displayFileBrowser">
+			<result name="success">fileBrowser.jsp</result>    
+        </action>
+		
+		<!-- Media Bin Viewer -->
+	    <action name="uploadMediaFile" class="com.salesmanager.central.merchantstore.BinUploadAction" method ="uploadToBin">
+		 	<result name="input">fileBrowser.jsp</result>
+			<result name="success">fileBrowser.jsp</result>
+			<interceptor-ref name="fileUpload">
+        			<param name="maximumSize">2097152</param><!-- approximatly 2 mb -->
+     		</interceptor-ref>
+     		<interceptor-ref name="defaultStack"/>    
+        </action>
+        
+        <!-- Media Bin Management -->
+        
+        <action name="binView" class="com.salesmanager.central.merchantstore.BinUploadAction" method ="displayFileBrowser">
+		 	<result name="success">binView.jsp</result>        
+        </action>
+        
+        <action name="binDelete" class="com.salesmanager.central.merchantstore.BinUploadAction" method ="deleteFile">
+			<result name="success">binView.jsp</result>
+			<result name="error">binView.jsp</result>        
+        </action>
+                
+        <action name="binAdd" class="com.salesmanager.central.merchantstore.BinUploadAction" method ="uploadToBin">
+		 	<result name="input">binView.jsp</result>
+			<result name="success">binView.jsp</result>
+			<interceptor-ref name="fileUpload">
+        			<param name="maximumSize">2097152</param><!-- approximatly 2 mb -->
+     		</interceptor-ref>
+     		<interceptor-ref name="defaultStack"/>        
+        </action>
+
+
+
+    </package>
+
+
+		<include file="struts-shoppingcart.xml" />
+
+		<include file="struts-tax.xml" />
+
+    	<include file="struts-payment.xml" />
+
+    	<include file="struts-shipping.xml" />
+
+    	<include file="struts-order.xml" />
+
+    	<include file="struts-catalog.xml" />
+
+    	<include file="struts-customer.xml" />
+
+    	<include file="struts-invoice.xml" />
+
+
+
+</struts>
+
+
+

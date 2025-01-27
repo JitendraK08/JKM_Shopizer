@@ -1,0 +1,1002 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<instances>
+ <instance id="VASTCreateTable.11" instanceOf="CAST_Oracle_RelationalTable">
+  <CAST_SQL_Object owner="SHOPIZER" version="10.2.0.4.0" objectId="51817"/>
+  <CAST_ANSISQL_TableSource scope=""/>
+  <CAST_Resolution_Identification resolutionName="CENTRAL_SEQUENCER"/>
+  <CAST_Linker_ExportedSymbol isPublic="1" exportCollation="2" exportedCategory="138016" exportedPath="CASTDB.SHOPIZER" exportName="CENTRAL_SEQUENCER" exportExtension=""/>
+  <CAST_AST_ANSISQL_WithAnonymousClause anonymousClause="" onCommit=""/>
+  <CAST_Symbol_WithParent parent="p_Schema.1"/>
+  <POSITIONABLE POSITIONS="CAST_TargetSourceFile.11(1,1,43,-1)"/>
+ </instance>
+ <instance id="CAST_TargetSourceFile.11" instanceOf="CAST_TargetSourceFile">
+  <bookmark source="VASTCreateTable.11.src"/>
+  <shell fullPath="VASTCreateTable.11.src"/>
+ </instance>
+<instance id="p_ColumnOfTable.75" instanceOf="CAST_Oracle_TableColumn">
+ <CAST_AST_ANSISQL_WithOrder order="1"/>
+ <CAST_SQL_Object version="10.2.0.4.0"/>
+ <CAST_ANSISQL_Column isNull="0" columnSize="10"/>
+ <CAST_AST_ANSISQL_WithGenericDataType collation=""/>
+ <CAST_Resolution_Identification resolutionName="CENTRAL_SEQUENCER_ID"/>
+ <CAST_Symbol_WithParent parent="VASTCreateTable.11"/>
+ <CAST_AST_ANSISQL_GenericDatatypeAttributes typeName="NUMBER" length="22" precision="10" scale="0"/>
+</instance>
+<instance id="p_ColumnOfTable.76" instanceOf="CAST_Oracle_TableColumn">
+ <CAST_AST_ANSISQL_WithOrder order="2"/>
+ <CAST_SQL_Object version="10.2.0.4.0"/>
+ <CAST_ANSISQL_Column isNull="0" columnSize="10"/>
+ <CAST_AST_ANSISQL_WithGenericDataType collation=""/>
+ <CAST_Resolution_Identification resolutionName="CUST_BASKET_ID_NEXT_VALUE"/>
+ <CAST_Symbol_WithParent parent="VASTCreateTable.11"/>
+ <CAST_AST_ANSISQL_GenericDatatypeAttributes typeName="NUMBER" length="22" precision="10" scale="0"/>
+</instance>
+<instance id="p_ColumnOfTable.77" instanceOf="CAST_Oracle_TableColumn">
+ <CAST_AST_ANSISQL_WithOrder order="3"/>
+ <CAST_SQL_Object version="10.2.0.4.0"/>
+ <CAST_ANSISQL_Column isNull="0" columnSize="10"/>
+ <CAST_AST_ANSISQL_WithGenericDataType collation=""/>
+ <CAST_Resolution_Identification resolutionName="CUST_BASKET_ATTR_ID_NEXT_VAL"/>
+ <CAST_Symbol_WithParent parent="VASTCreateTable.11"/>
+ <CAST_AST_ANSISQL_GenericDatatypeAttributes typeName="NUMBER" length="22" precision="10" scale="0"/>
+</instance>
+<instance id="p_ColumnOfTable.78" instanceOf="CAST_Oracle_TableColumn">
+ <CAST_AST_ANSISQL_WithOrder order="4"/>
+ <CAST_SQL_Object version="10.2.0.4.0"/>
+ <CAST_ANSISQL_Column isNull="0" columnSize="10"/>
+ <CAST_AST_ANSISQL_WithGenericDataType collation=""/>
+ <CAST_Resolution_Identification resolutionName="MERCHANT_CONF_ID_NEXT_VAL"/>
+ <CAST_Symbol_WithParent parent="VASTCreateTable.11"/>
+ <CAST_AST_ANSISQL_GenericDatatypeAttributes typeName="NUMBER" length="22" precision="10" scale="0"/>
+</instance>
+<instance id="p_ColumnOfTable.79" instanceOf="CAST_Oracle_TableColumn">
+ <CAST_AST_ANSISQL_WithOrder order="5"/>
+ <CAST_SQL_Object version="10.2.0.4.0"/>
+ <CAST_ANSISQL_Column isNull="0" columnSize="10"/>
+ <CAST_AST_ANSISQL_WithGenericDataType collation=""/>
+ <CAST_Resolution_Identification resolutionName="MERCHANT_USER_INFO_ID_NEXT_VAL"/>
+ <CAST_Symbol_WithParent parent="VASTCreateTable.11"/>
+ <CAST_AST_ANSISQL_GenericDatatypeAttributes typeName="NUMBER" length="22" precision="10" scale="0"/>
+</instance>
+<instance id="p_ColumnOfTable.80" instanceOf="CAST_Oracle_TableColumn">
+ <CAST_AST_ANSISQL_WithOrder order="6"/>
+ <CAST_SQL_Object version="10.2.0.4.0"/>
+ <CAST_ANSISQL_Column isNull="0" columnSize="10"/>
+ <CAST_AST_ANSISQL_WithGenericDataType collation=""/>
+ <CAST_Resolution_Identification resolutionName="CATEGORY_ID_NEXT_VALUE"/>
+ <CAST_Symbol_WithParent parent="VASTCreateTable.11"/>
+ <CAST_AST_ANSISQL_GenericDatatypeAttributes typeName="NUMBER" length="22" precision="10" scale="0"/>
+</instance>
+<instance id="p_ColumnOfTable.81" instanceOf="CAST_Oracle_TableColumn">
+ <CAST_AST_ANSISQL_WithOrder order="7"/>
+ <CAST_SQL_Object version="10.2.0.4.0"/>
+ <CAST_ANSISQL_Column isNull="0" columnSize="10"/>
+ <CAST_AST_ANSISQL_WithGenericDataType collation=""/>
+ <CAST_Resolution_Identification resolutionName="PRODUCT_ID_NEXT_VALUE"/>
+ <CAST_Symbol_WithParent parent="VASTCreateTable.11"/>
+ <CAST_AST_ANSISQL_GenericDatatypeAttributes typeName="NUMBER" length="22" precision="10" scale="0"/>
+</instance>
+<instance id="p_ColumnOfTable.82" instanceOf="CAST_Oracle_TableColumn">
+ <CAST_AST_ANSISQL_WithOrder order="8"/>
+ <CAST_SQL_Object version="10.2.0.4.0"/>
+ <CAST_ANSISQL_Column isNull="0" columnSize="10"/>
+ <CAST_AST_ANSISQL_WithGenericDataType collation=""/>
+ <CAST_Resolution_Identification resolutionName="PRODUCT_OPTIONS_ID_NEXT_VALUE"/>
+ <CAST_Symbol_WithParent parent="VASTCreateTable.11"/>
+ <CAST_AST_ANSISQL_GenericDatatypeAttributes typeName="NUMBER" length="22" precision="10" scale="0"/>
+</instance>
+<instance id="p_ColumnOfTable.83" instanceOf="CAST_Oracle_TableColumn">
+ <CAST_AST_ANSISQL_WithOrder order="9"/>
+ <CAST_SQL_Object version="10.2.0.4.0"/>
+ <CAST_ANSISQL_Column isNull="0" columnSize="10"/>
+ <CAST_AST_ANSISQL_WithGenericDataType collation=""/>
+ <CAST_Resolution_Identification resolutionName="PRODUCT_ATTR_ID_NEXT_VAL"/>
+ <CAST_Symbol_WithParent parent="VASTCreateTable.11"/>
+ <CAST_AST_ANSISQL_GenericDatatypeAttributes typeName="NUMBER" length="22" precision="10" scale="0"/>
+</instance>
+<instance id="p_ColumnOfTable.84" instanceOf="CAST_Oracle_TableColumn">
+ <CAST_AST_ANSISQL_WithOrder order="10"/>
+ <CAST_SQL_Object version="10.2.0.4.0"/>
+ <CAST_ANSISQL_Column isNull="0" columnSize="10"/>
+ <CAST_AST_ANSISQL_WithGenericDataType collation=""/>
+ <CAST_Resolution_Identification resolutionName="PRODUCT_PRICE_ID_NEXT_VAL"/>
+ <CAST_Symbol_WithParent parent="VASTCreateTable.11"/>
+ <CAST_AST_ANSISQL_GenericDatatypeAttributes typeName="NUMBER" length="22" precision="10" scale="0"/>
+</instance>
+<instance id="p_ColumnOfTable.85" instanceOf="CAST_Oracle_TableColumn">
+ <CAST_AST_ANSISQL_WithOrder order="11"/>
+ <CAST_SQL_Object version="10.2.0.4.0"/>
+ <CAST_ANSISQL_Column isNull="0" columnSize="10"/>
+ <CAST_AST_ANSISQL_WithGenericDataType collation=""/>
+ <CAST_Resolution_Identification resolutionName="GEO_ZONE_ID_NEXT_VALUE"/>
+ <CAST_Symbol_WithParent parent="VASTCreateTable.11"/>
+ <CAST_AST_ANSISQL_GenericDatatypeAttributes typeName="NUMBER" length="22" precision="10" scale="0"/>
+</instance>
+<instance id="p_ColumnOfTable.86" instanceOf="CAST_Oracle_TableColumn">
+ <CAST_AST_ANSISQL_WithOrder order="12"/>
+ <CAST_SQL_Object version="10.2.0.4.0"/>
+ <CAST_ANSISQL_Column isNull="0" columnSize="10"/>
+ <CAST_AST_ANSISQL_WithGenericDataType collation=""/>
+ <CAST_Resolution_Identification resolutionName="TAX_RATE_ID_NEXT_VALUE"/>
+ <CAST_Symbol_WithParent parent="VASTCreateTable.11"/>
+ <CAST_AST_ANSISQL_GenericDatatypeAttributes typeName="NUMBER" length="22" precision="10" scale="0"/>
+</instance>
+<instance id="p_ColumnOfTable.87" instanceOf="CAST_Oracle_TableColumn">
+ <CAST_AST_ANSISQL_WithOrder order="13"/>
+ <CAST_SQL_Object version="10.2.0.4.0"/>
+ <CAST_ANSISQL_Column isNull="0" columnSize="10"/>
+ <CAST_AST_ANSISQL_WithGenericDataType collation=""/>
+ <CAST_Resolution_Identification resolutionName="PRODUCT_OPTION_ID_NEXT_VALUE"/>
+ <CAST_Symbol_WithParent parent="VASTCreateTable.11"/>
+ <CAST_AST_ANSISQL_GenericDatatypeAttributes typeName="NUMBER" length="22" precision="10" scale="0"/>
+</instance>
+<instance id="p_ColumnOfTable.88" instanceOf="CAST_Oracle_TableColumn">
+ <CAST_AST_ANSISQL_WithOrder order="14"/>
+ <CAST_SQL_Object version="10.2.0.4.0"/>
+ <CAST_ANSISQL_Column isNull="0" columnSize="10"/>
+ <CAST_AST_ANSISQL_WithGenericDataType collation=""/>
+ <CAST_Resolution_Identification resolutionName="PRODUCT_OPT_VALUES_ID_NEXT_VAL"/>
+ <CAST_Symbol_WithParent parent="VASTCreateTable.11"/>
+ <CAST_AST_ANSISQL_GenericDatatypeAttributes typeName="NUMBER" length="22" precision="10" scale="0"/>
+</instance>
+<instance id="p_ColumnOfTable.89" instanceOf="CAST_Oracle_TableColumn">
+ <CAST_AST_ANSISQL_WithOrder order="15"/>
+ <CAST_SQL_Object version="10.2.0.4.0"/>
+ <CAST_ANSISQL_Column isNull="0" columnSize="10"/>
+ <CAST_AST_ANSISQL_WithGenericDataType collation=""/>
+ <CAST_Resolution_Identification resolutionName="ORDER_ID_NEXT_VALUE"/>
+ <CAST_Symbol_WithParent parent="VASTCreateTable.11"/>
+ <CAST_AST_ANSISQL_GenericDatatypeAttributes typeName="NUMBER" length="22" precision="10" scale="0"/>
+</instance>
+<instance id="p_ColumnOfTable.90" instanceOf="CAST_Oracle_TableColumn">
+ <CAST_AST_ANSISQL_WithOrder order="16"/>
+ <CAST_SQL_Object version="10.2.0.4.0"/>
+ <CAST_ANSISQL_Column isNull="0" columnSize="10"/>
+ <CAST_AST_ANSISQL_WithGenericDataType collation=""/>
+ <CAST_Resolution_Identification resolutionName="CUSTOMER_ID_NEXT_VALUE"/>
+ <CAST_Symbol_WithParent parent="VASTCreateTable.11"/>
+ <CAST_AST_ANSISQL_GenericDatatypeAttributes typeName="NUMBER" length="22" precision="10" scale="0"/>
+</instance>
+<instance id="p_ColumnOfTable.91" instanceOf="CAST_Oracle_TableColumn">
+ <CAST_AST_ANSISQL_WithOrder order="17"/>
+ <CAST_SQL_Object version="10.2.0.4.0"/>
+ <CAST_ANSISQL_Column isNull="0" columnSize="10"/>
+ <CAST_AST_ANSISQL_WithGenericDataType collation=""/>
+ <CAST_Resolution_Identification resolutionName="ORDER_TOTAL_ID_NEXT_VALUE"/>
+ <CAST_Symbol_WithParent parent="VASTCreateTable.11"/>
+ <CAST_AST_ANSISQL_GenericDatatypeAttributes typeName="NUMBER" length="22" precision="10" scale="0"/>
+</instance>
+<instance id="p_ColumnOfTable.92" instanceOf="CAST_Oracle_TableColumn">
+ <CAST_AST_ANSISQL_WithOrder order="18"/>
+ <CAST_SQL_Object version="10.2.0.4.0"/>
+ <CAST_ANSISQL_Column isNull="0" columnSize="10"/>
+ <CAST_AST_ANSISQL_WithGenericDataType collation=""/>
+ <CAST_Resolution_Identification resolutionName="ORDER_PRODUCT_ID_NEXT_VALUE"/>
+ <CAST_Symbol_WithParent parent="VASTCreateTable.11"/>
+ <CAST_AST_ANSISQL_GenericDatatypeAttributes typeName="NUMBER" length="22" precision="10" scale="0"/>
+</instance>
+<instance id="p_ColumnOfTable.93" instanceOf="CAST_Oracle_TableColumn">
+ <CAST_AST_ANSISQL_WithOrder order="19"/>
+ <CAST_SQL_Object version="10.2.0.4.0"/>
+ <CAST_ANSISQL_Column isNull="0" columnSize="10"/>
+ <CAST_AST_ANSISQL_WithGenericDataType collation=""/>
+ <CAST_Resolution_Identification resolutionName="ORDER_PRD_PRICE_ID_NEXT_VAL"/>
+ <CAST_Symbol_WithParent parent="VASTCreateTable.11"/>
+ <CAST_AST_ANSISQL_GenericDatatypeAttributes typeName="NUMBER" length="22" precision="10" scale="0"/>
+</instance>
+<instance id="p_ColumnOfTable.94" instanceOf="CAST_Oracle_TableColumn">
+ <CAST_AST_ANSISQL_WithOrder order="20"/>
+ <CAST_SQL_Object version="10.2.0.4.0"/>
+ <CAST_ANSISQL_Column isNull="0" columnSize="10"/>
+ <CAST_AST_ANSISQL_WithGenericDataType collation=""/>
+ <CAST_Resolution_Identification resolutionName="ORDER_PRODUCT_ATTR_ID_NEXT_VAL"/>
+ <CAST_Symbol_WithParent parent="VASTCreateTable.11"/>
+ <CAST_AST_ANSISQL_GenericDatatypeAttributes typeName="NUMBER" length="22" precision="10" scale="0"/>
+</instance>
+<instance id="p_ColumnOfTable.95" instanceOf="CAST_Oracle_TableColumn">
+ <CAST_AST_ANSISQL_WithOrder order="21"/>
+ <CAST_SQL_Object version="10.2.0.4.0"/>
+ <CAST_ANSISQL_Column isNull="0" columnSize="10"/>
+ <CAST_AST_ANSISQL_WithGenericDataType collation=""/>
+ <CAST_Resolution_Identification resolutionName="ORDER_PRODUCT_DL_ID_NEXT_VALUE"/>
+ <CAST_Symbol_WithParent parent="VASTCreateTable.11"/>
+ <CAST_AST_ANSISQL_GenericDatatypeAttributes typeName="NUMBER" length="22" precision="10" scale="0"/>
+</instance>
+<instance id="p_ColumnOfTable.96" instanceOf="CAST_Oracle_TableColumn">
+ <CAST_AST_ANSISQL_WithOrder order="22"/>
+ <CAST_SQL_Object version="10.2.0.4.0"/>
+ <CAST_ANSISQL_Column isNull="0" columnSize="10"/>
+ <CAST_AST_ANSISQL_WithGenericDataType collation=""/>
+ <CAST_Resolution_Identification resolutionName="ORDER_ACCOUNT_ID_NEXT_VALUE"/>
+ <CAST_Symbol_WithParent parent="VASTCreateTable.11"/>
+ <CAST_AST_ANSISQL_GenericDatatypeAttributes typeName="NUMBER" length="22" precision="10" scale="0"/>
+</instance>
+<instance id="p_ColumnOfTable.97" instanceOf="CAST_Oracle_TableColumn">
+ <CAST_AST_ANSISQL_WithOrder order="23"/>
+ <CAST_SQL_Object version="10.2.0.4.0"/>
+ <CAST_ANSISQL_Column isNull="0" columnSize="10"/>
+ <CAST_AST_ANSISQL_WithGenericDataType collation=""/>
+ <CAST_Resolution_Identification resolutionName="ORDER_ACCOUNT_PRD_ID_NEXT_VAL"/>
+ <CAST_Symbol_WithParent parent="VASTCreateTable.11"/>
+ <CAST_AST_ANSISQL_GenericDatatypeAttributes typeName="NUMBER" length="22" precision="10" scale="0"/>
+</instance>
+<instance id="p_ColumnOfTable.98" instanceOf="CAST_Oracle_TableColumn">
+ <CAST_AST_ANSISQL_WithOrder order="24"/>
+ <CAST_SQL_Object version="10.2.0.4.0"/>
+ <CAST_ANSISQL_Column isNull="0" columnSize="10"/>
+ <CAST_AST_ANSISQL_WithGenericDataType collation=""/>
+ <CAST_Resolution_Identification resolutionName="ORDER_ACCNT_PRD_PRICE_ID_N_VAL"/>
+ <CAST_Symbol_WithParent parent="VASTCreateTable.11"/>
+ <CAST_AST_ANSISQL_GenericDatatypeAttributes typeName="NUMBER" length="22" precision="10" scale="0"/>
+</instance>
+<instance id="p_ColumnOfTable.99" instanceOf="CAST_Oracle_TableColumn">
+ <CAST_AST_ANSISQL_WithOrder order="25"/>
+ <CAST_SQL_Object version="10.2.0.4.0"/>
+ <CAST_ANSISQL_Column isNull="0" columnSize="10"/>
+ <CAST_AST_ANSISQL_WithGenericDataType collation=""/>
+ <CAST_Resolution_Identification resolutionName="ORDER_ACCNT_PRD_ATTR_ID_N_VAL"/>
+ <CAST_Symbol_WithParent parent="VASTCreateTable.11"/>
+ <CAST_AST_ANSISQL_GenericDatatypeAttributes typeName="NUMBER" length="22" precision="10" scale="0"/>
+</instance>
+<instance id="p_ColumnOfTable.100" instanceOf="CAST_Oracle_TableColumn">
+ <CAST_AST_ANSISQL_WithOrder order="26"/>
+ <CAST_SQL_Object version="10.2.0.4.0"/>
+ <CAST_ANSISQL_Column isNull="0" columnSize="10"/>
+ <CAST_AST_ANSISQL_WithGenericDataType collation=""/>
+ <CAST_Resolution_Identification resolutionName="PRODUCT_SPECIAL_NEXT_VALUE"/>
+ <CAST_Symbol_WithParent parent="VASTCreateTable.11"/>
+ <CAST_AST_ANSISQL_GenericDatatypeAttributes typeName="NUMBER" length="22" precision="10" scale="0"/>
+</instance>
+<instance id="p_ColumnOfTable.101" instanceOf="CAST_Oracle_TableColumn">
+ <CAST_AST_ANSISQL_WithOrder order="27"/>
+ <CAST_SQL_Object version="10.2.0.4.0"/>
+ <CAST_ANSISQL_Column isNull="0" columnSize="10"/>
+ <CAST_AST_ANSISQL_WithGenericDataType collation=""/>
+ <CAST_Resolution_Identification resolutionName="DYNAMIC_LABEL_ID_NEXT_VALUE"/>
+ <CAST_Symbol_WithParent parent="VASTCreateTable.11"/>
+ <CAST_AST_ANSISQL_GenericDatatypeAttributes typeName="NUMBER" length="22" precision="10" scale="0"/>
+</instance>
+<instance id="p_ColumnOfTable.102" instanceOf="CAST_Oracle_TableColumn">
+ <CAST_AST_ANSISQL_WithOrder order="28"/>
+ <CAST_SQL_Object version="10.2.0.4.0"/>
+ <CAST_ANSISQL_Column isNull="0" columnSize="10"/>
+ <CAST_AST_ANSISQL_WithGenericDataType collation=""/>
+ <CAST_Resolution_Identification resolutionName="GATEWAY_TRX_ID_NEXT_VALUE"/>
+ <CAST_Symbol_WithParent parent="VASTCreateTable.11"/>
+ <CAST_AST_ANSISQL_GenericDatatypeAttributes typeName="NUMBER" length="22" precision="10" scale="0"/>
+</instance>
+<instance id="p_ColumnOfTable.103" instanceOf="CAST_Oracle_TableColumn">
+ <CAST_AST_ANSISQL_WithOrder order="29"/>
+ <CAST_SQL_Object version="10.2.0.4.0"/>
+ <CAST_ANSISQL_Column isNull="0" columnSize="10"/>
+ <CAST_AST_ANSISQL_WithGenericDataType collation=""/>
+ <CAST_Resolution_Identification resolutionName="REVIEW_ID_NEXT_VALUE"/>
+ <CAST_Symbol_WithParent parent="VASTCreateTable.11"/>
+ <CAST_AST_ANSISQL_GenericDatatypeAttributes typeName="NUMBER" length="22" precision="10" scale="0"/>
+</instance>
+<instance id="p_ColumnOfTable.104" instanceOf="CAST_Oracle_TableColumn">
+ <CAST_AST_ANSISQL_WithOrder order="30"/>
+ <CAST_SQL_Object version="10.2.0.4.0"/>
+ <CAST_ANSISQL_Column isNull="0" columnSize="10"/>
+ <CAST_AST_ANSISQL_WithGenericDataType collation=""/>
+ <CAST_Resolution_Identification resolutionName="MERCHANTID_ID_NEXT_VALUE"/>
+ <CAST_Symbol_WithParent parent="VASTCreateTable.11"/>
+ <CAST_AST_ANSISQL_GenericDatatypeAttributes typeName="NUMBER" length="22" precision="10" scale="0"/>
+</instance>
+<instance id="p_ColumnOfTable.105" instanceOf="CAST_Oracle_TableColumn">
+ <CAST_AST_ANSISQL_WithOrder order="31"/>
+ <CAST_SQL_Object version="10.2.0.4.0"/>
+ <CAST_ANSISQL_Column isNull="0" columnSize="10"/>
+ <CAST_AST_ANSISQL_WithGenericDataType collation=""/>
+ <CAST_Resolution_Identification resolutionName="CRA_ID_NEXT_VALUE"/>
+ <CAST_Symbol_WithParent parent="VASTCreateTable.11"/>
+ <CAST_AST_ANSISQL_GenericDatatypeAttributes typeName="NUMBER" length="22" precision="10" scale="0"/>
+</instance>
+<instance id="p_ColumnOfTable.106" instanceOf="CAST_Oracle_TableColumn">
+ <CAST_AST_ANSISQL_WithOrder order="32"/>
+ <CAST_SQL_Object version="10.2.0.4.0"/>
+ <CAST_ANSISQL_Column isNull="0" columnSize="10"/>
+ <CAST_AST_ANSISQL_WithGenericDataType collation=""/>
+ <CAST_Resolution_Identification resolutionName="CIE_ID_NEXT_VALUE"/>
+ <CAST_Symbol_WithParent parent="VASTCreateTable.11"/>
+ <CAST_AST_ANSISQL_GenericDatatypeAttributes typeName="NUMBER" length="22" precision="10" scale="0"/>
+</instance>
+<instance id="p_ColumnOfTable.107" instanceOf="CAST_Oracle_TableColumn">
+ <CAST_AST_ANSISQL_WithOrder order="33"/>
+ <CAST_SQL_Object version="10.2.0.4.0"/>
+ <CAST_ANSISQL_Column isNull="0" columnSize="10"/>
+ <CAST_AST_ANSISQL_WithGenericDataType collation=""/>
+ <CAST_Resolution_Identification resolutionName="MANUFACTURERS_ID_NEXT_VALUE"/>
+ <CAST_Symbol_WithParent parent="VASTCreateTable.11"/>
+ <CAST_AST_ANSISQL_GenericDatatypeAttributes typeName="NUMBER" length="22" precision="10" scale="0"/>
+</instance>
+<instance id="p_ColumnOfTable.108" instanceOf="CAST_Oracle_TableColumn">
+ <CAST_AST_ANSISQL_WithOrder order="34"/>
+ <CAST_SQL_Object version="10.2.0.4.0"/>
+ <CAST_ANSISQL_Column isNull="0" columnSize="10"/>
+ <CAST_AST_ANSISQL_WithGenericDataType collation=""/>
+ <CAST_Resolution_Identification resolutionName="MRD_ID_NEXT_VALUE"/>
+ <CAST_Symbol_WithParent parent="VASTCreateTable.11"/>
+ <CAST_AST_ANSISQL_GenericDatatypeAttributes typeName="NUMBER" length="22" precision="10" scale="0"/>
+</instance>
+<instance id="p_ColumnOfTable.109" instanceOf="CAST_Oracle_TableColumn">
+ <CAST_AST_ANSISQL_WithOrder order="35"/>
+ <CAST_SQL_Object version="10.2.0.4.0"/>
+ <CAST_ANSISQL_Column isNull="0" columnSize="10"/>
+ <CAST_AST_ANSISQL_WithGenericDataType collation=""/>
+ <CAST_Resolution_Identification resolutionName="MUR_ID_NEXT_VALUE"/>
+ <CAST_Symbol_WithParent parent="VASTCreateTable.11"/>
+ <CAST_AST_ANSISQL_GenericDatatypeAttributes typeName="NUMBER" length="22" precision="10" scale="0"/>
+</instance>
+<instance id="p_ColumnOfTable.110" instanceOf="CAST_Oracle_TableColumn">
+ <CAST_AST_ANSISQL_WithOrder order="36"/>
+ <CAST_SQL_Object version="10.2.0.4.0"/>
+ <CAST_ANSISQL_Column isNull="0" columnSize="10"/>
+ <CAST_AST_ANSISQL_WithGenericDataType collation=""/>
+ <CAST_Resolution_Identification resolutionName="GTGZ_ID_NEXT_VALUE"/>
+ <CAST_Symbol_WithParent parent="VASTCreateTable.11"/>
+ <CAST_AST_ANSISQL_GenericDatatypeAttributes typeName="NUMBER" length="22" precision="10" scale="0"/>
+</instance>
+<instance id="p_ColumnOfTable.111" instanceOf="CAST_Oracle_TableColumn">
+ <CAST_AST_ANSISQL_WithOrder order="37"/>
+ <CAST_SQL_Object version="10.2.0.4.0"/>
+ <CAST_ANSISQL_Column isNull="0" columnSize="10"/>
+ <CAST_AST_ANSISQL_WithGenericDataType collation=""/>
+ <CAST_Resolution_Identification resolutionName="STATUS_HIST_ID_NEXT_VALUE"/>
+ <CAST_Symbol_WithParent parent="VASTCreateTable.11"/>
+ <CAST_AST_ANSISQL_GenericDatatypeAttributes typeName="NUMBER" length="22" precision="10" scale="0"/>
+</instance>
+<instance id="p_ColumnOfTable.112" instanceOf="CAST_Oracle_TableColumn">
+ <CAST_AST_ANSISQL_WithOrder order="38"/>
+ <CAST_SQL_Object version="10.2.0.4.0"/>
+ <CAST_ANSISQL_Column isNull="0" columnSize="10"/>
+ <CAST_AST_ANSISQL_WithGenericDataType collation=""/>
+ <CAST_Resolution_Identification resolutionName="RELATIONSHIP_ID_NEXT_VALUE"/>
+ <CAST_Symbol_WithParent parent="VASTCreateTable.11"/>
+ <CAST_AST_ANSISQL_GenericDatatypeAttributes typeName="NUMBER" length="22" precision="10" scale="0"/>
+</instance>
+<instance id="p_ColumnOfTable.113" instanceOf="CAST_Oracle_TableColumn">
+ <CAST_AST_ANSISQL_WithOrder order="39"/>
+ <CAST_SQL_Object version="10.2.0.4.0"/>
+ <CAST_ANSISQL_Column isNull="0" columnSize="10"/>
+ <CAST_AST_ANSISQL_WithGenericDataType collation=""/>
+ <CAST_Resolution_Identification resolutionName="TAXCLASS_ID_NEXT_VALUE"/>
+ <CAST_Symbol_WithParent parent="VASTCreateTable.11"/>
+ <CAST_AST_ANSISQL_GenericDatatypeAttributes typeName="NUMBER" length="22" precision="10" scale="0"/>
+</instance>
+<instance id="CAST_AST_ANSISQL_GenericColumnReference.37" instanceOf="CAST_AST_ANSISQL_GenericColumnReference">
+ <CAST_AST_ANSISQL_WithOrder order="1"/>
+ <CAST_AST_WithParent parentAST="p_Constraint.65"/>
+ <CAST_AST_WithResolutionSymbolReference resolutionSymbol="p_ColumnOfTable.75"/>
+</instance>
+<instance id="CAST_AST_ANSISQL_GenericColumnReference.38" instanceOf="CAST_AST_ANSISQL_GenericColumnReference">
+ <CAST_AST_ANSISQL_WithOrder order=""/>
+ <CAST_AST_WithParent parentAST="p_Constraint.128"/>
+ <CAST_AST_WithResolutionSymbolReference resolutionSymbol="p_ColumnOfTable.93"/>
+</instance>
+<instance id="CAST_AST_ANSISQL_GenericColumnReference.39" instanceOf="CAST_AST_ANSISQL_GenericColumnReference">
+ <CAST_AST_ANSISQL_WithOrder order=""/>
+ <CAST_AST_WithParent parentAST="p_Constraint.129"/>
+ <CAST_AST_WithResolutionSymbolReference resolutionSymbol="p_ColumnOfTable.94"/>
+</instance>
+<instance id="CAST_AST_ANSISQL_GenericColumnReference.40" instanceOf="CAST_AST_ANSISQL_GenericColumnReference">
+ <CAST_AST_ANSISQL_WithOrder order=""/>
+ <CAST_AST_WithParent parentAST="p_Constraint.130"/>
+ <CAST_AST_WithResolutionSymbolReference resolutionSymbol="p_ColumnOfTable.95"/>
+</instance>
+<instance id="CAST_AST_ANSISQL_GenericColumnReference.41" instanceOf="CAST_AST_ANSISQL_GenericColumnReference">
+ <CAST_AST_ANSISQL_WithOrder order=""/>
+ <CAST_AST_WithParent parentAST="p_Constraint.131"/>
+ <CAST_AST_WithResolutionSymbolReference resolutionSymbol="p_ColumnOfTable.96"/>
+</instance>
+<instance id="CAST_AST_ANSISQL_GenericColumnReference.42" instanceOf="CAST_AST_ANSISQL_GenericColumnReference">
+ <CAST_AST_ANSISQL_WithOrder order=""/>
+ <CAST_AST_WithParent parentAST="p_Constraint.132"/>
+ <CAST_AST_WithResolutionSymbolReference resolutionSymbol="p_ColumnOfTable.97"/>
+</instance>
+<instance id="CAST_AST_ANSISQL_GenericColumnReference.43" instanceOf="CAST_AST_ANSISQL_GenericColumnReference">
+ <CAST_AST_ANSISQL_WithOrder order=""/>
+ <CAST_AST_WithParent parentAST="p_Constraint.133"/>
+ <CAST_AST_WithResolutionSymbolReference resolutionSymbol="p_ColumnOfTable.98"/>
+</instance>
+<instance id="CAST_AST_ANSISQL_GenericColumnReference.44" instanceOf="CAST_AST_ANSISQL_GenericColumnReference">
+ <CAST_AST_ANSISQL_WithOrder order=""/>
+ <CAST_AST_WithParent parentAST="p_Constraint.134"/>
+ <CAST_AST_WithResolutionSymbolReference resolutionSymbol="p_ColumnOfTable.99"/>
+</instance>
+<instance id="CAST_AST_ANSISQL_GenericColumnReference.45" instanceOf="CAST_AST_ANSISQL_GenericColumnReference">
+ <CAST_AST_ANSISQL_WithOrder order=""/>
+ <CAST_AST_WithParent parentAST="p_Constraint.135"/>
+ <CAST_AST_WithResolutionSymbolReference resolutionSymbol="p_ColumnOfTable.100"/>
+</instance>
+<instance id="CAST_AST_ANSISQL_GenericColumnReference.46" instanceOf="CAST_AST_ANSISQL_GenericColumnReference">
+ <CAST_AST_ANSISQL_WithOrder order=""/>
+ <CAST_AST_WithParent parentAST="p_Constraint.136"/>
+ <CAST_AST_WithResolutionSymbolReference resolutionSymbol="p_ColumnOfTable.101"/>
+</instance>
+<instance id="CAST_AST_ANSISQL_GenericColumnReference.47" instanceOf="CAST_AST_ANSISQL_GenericColumnReference">
+ <CAST_AST_ANSISQL_WithOrder order=""/>
+ <CAST_AST_WithParent parentAST="p_Constraint.137"/>
+ <CAST_AST_WithResolutionSymbolReference resolutionSymbol="p_ColumnOfTable.102"/>
+</instance>
+<instance id="CAST_AST_ANSISQL_GenericColumnReference.48" instanceOf="CAST_AST_ANSISQL_GenericColumnReference">
+ <CAST_AST_ANSISQL_WithOrder order=""/>
+ <CAST_AST_WithParent parentAST="p_Constraint.138"/>
+ <CAST_AST_WithResolutionSymbolReference resolutionSymbol="p_ColumnOfTable.103"/>
+</instance>
+<instance id="CAST_AST_ANSISQL_GenericColumnReference.49" instanceOf="CAST_AST_ANSISQL_GenericColumnReference">
+ <CAST_AST_ANSISQL_WithOrder order=""/>
+ <CAST_AST_WithParent parentAST="p_Constraint.139"/>
+ <CAST_AST_WithResolutionSymbolReference resolutionSymbol="p_ColumnOfTable.104"/>
+</instance>
+<instance id="CAST_AST_ANSISQL_GenericColumnReference.50" instanceOf="CAST_AST_ANSISQL_GenericColumnReference">
+ <CAST_AST_ANSISQL_WithOrder order=""/>
+ <CAST_AST_WithParent parentAST="p_Constraint.140"/>
+ <CAST_AST_WithResolutionSymbolReference resolutionSymbol="p_ColumnOfTable.105"/>
+</instance>
+<instance id="CAST_AST_ANSISQL_GenericColumnReference.51" instanceOf="CAST_AST_ANSISQL_GenericColumnReference">
+ <CAST_AST_ANSISQL_WithOrder order=""/>
+ <CAST_AST_WithParent parentAST="p_Constraint.141"/>
+ <CAST_AST_WithResolutionSymbolReference resolutionSymbol="p_ColumnOfTable.106"/>
+</instance>
+<instance id="CAST_AST_ANSISQL_GenericColumnReference.52" instanceOf="CAST_AST_ANSISQL_GenericColumnReference">
+ <CAST_AST_ANSISQL_WithOrder order=""/>
+ <CAST_AST_WithParent parentAST="p_Constraint.142"/>
+ <CAST_AST_WithResolutionSymbolReference resolutionSymbol="p_ColumnOfTable.107"/>
+</instance>
+<instance id="CAST_AST_ANSISQL_GenericColumnReference.53" instanceOf="CAST_AST_ANSISQL_GenericColumnReference">
+ <CAST_AST_ANSISQL_WithOrder order=""/>
+ <CAST_AST_WithParent parentAST="p_Constraint.143"/>
+ <CAST_AST_WithResolutionSymbolReference resolutionSymbol="p_ColumnOfTable.108"/>
+</instance>
+<instance id="CAST_AST_ANSISQL_GenericColumnReference.54" instanceOf="CAST_AST_ANSISQL_GenericColumnReference">
+ <CAST_AST_ANSISQL_WithOrder order=""/>
+ <CAST_AST_WithParent parentAST="p_Constraint.144"/>
+ <CAST_AST_WithResolutionSymbolReference resolutionSymbol="p_ColumnOfTable.109"/>
+</instance>
+<instance id="CAST_AST_ANSISQL_GenericColumnReference.55" instanceOf="CAST_AST_ANSISQL_GenericColumnReference">
+ <CAST_AST_ANSISQL_WithOrder order=""/>
+ <CAST_AST_WithParent parentAST="p_Constraint.145"/>
+ <CAST_AST_WithResolutionSymbolReference resolutionSymbol="p_ColumnOfTable.110"/>
+</instance>
+<instance id="CAST_AST_ANSISQL_GenericColumnReference.56" instanceOf="CAST_AST_ANSISQL_GenericColumnReference">
+ <CAST_AST_ANSISQL_WithOrder order=""/>
+ <CAST_AST_WithParent parentAST="p_Constraint.146"/>
+ <CAST_AST_WithResolutionSymbolReference resolutionSymbol="p_ColumnOfTable.111"/>
+</instance>
+<instance id="CAST_AST_ANSISQL_GenericColumnReference.57" instanceOf="CAST_AST_ANSISQL_GenericColumnReference">
+ <CAST_AST_ANSISQL_WithOrder order=""/>
+ <CAST_AST_WithParent parentAST="p_Constraint.147"/>
+ <CAST_AST_WithResolutionSymbolReference resolutionSymbol="p_ColumnOfTable.112"/>
+</instance>
+<instance id="CAST_AST_ANSISQL_GenericColumnReference.58" instanceOf="CAST_AST_ANSISQL_GenericColumnReference">
+ <CAST_AST_ANSISQL_WithOrder order=""/>
+ <CAST_AST_WithParent parentAST="p_Constraint.148"/>
+ <CAST_AST_WithResolutionSymbolReference resolutionSymbol="p_ColumnOfTable.113"/>
+</instance>
+<instance id="CAST_AST_ANSISQL_GenericColumnReference.59" instanceOf="CAST_AST_ANSISQL_GenericColumnReference">
+ <CAST_AST_ANSISQL_WithOrder order=""/>
+ <CAST_AST_WithParent parentAST="p_Constraint.110"/>
+ <CAST_AST_WithResolutionSymbolReference resolutionSymbol="p_ColumnOfTable.75"/>
+</instance>
+<instance id="CAST_AST_ANSISQL_GenericColumnReference.60" instanceOf="CAST_AST_ANSISQL_GenericColumnReference">
+ <CAST_AST_ANSISQL_WithOrder order=""/>
+ <CAST_AST_WithParent parentAST="p_Constraint.111"/>
+ <CAST_AST_WithResolutionSymbolReference resolutionSymbol="p_ColumnOfTable.76"/>
+</instance>
+<instance id="CAST_AST_ANSISQL_GenericColumnReference.61" instanceOf="CAST_AST_ANSISQL_GenericColumnReference">
+ <CAST_AST_ANSISQL_WithOrder order=""/>
+ <CAST_AST_WithParent parentAST="p_Constraint.112"/>
+ <CAST_AST_WithResolutionSymbolReference resolutionSymbol="p_ColumnOfTable.77"/>
+</instance>
+<instance id="CAST_AST_ANSISQL_GenericColumnReference.62" instanceOf="CAST_AST_ANSISQL_GenericColumnReference">
+ <CAST_AST_ANSISQL_WithOrder order=""/>
+ <CAST_AST_WithParent parentAST="p_Constraint.113"/>
+ <CAST_AST_WithResolutionSymbolReference resolutionSymbol="p_ColumnOfTable.78"/>
+</instance>
+<instance id="CAST_AST_ANSISQL_GenericColumnReference.63" instanceOf="CAST_AST_ANSISQL_GenericColumnReference">
+ <CAST_AST_ANSISQL_WithOrder order=""/>
+ <CAST_AST_WithParent parentAST="p_Constraint.114"/>
+ <CAST_AST_WithResolutionSymbolReference resolutionSymbol="p_ColumnOfTable.79"/>
+</instance>
+<instance id="CAST_AST_ANSISQL_GenericColumnReference.64" instanceOf="CAST_AST_ANSISQL_GenericColumnReference">
+ <CAST_AST_ANSISQL_WithOrder order=""/>
+ <CAST_AST_WithParent parentAST="p_Constraint.115"/>
+ <CAST_AST_WithResolutionSymbolReference resolutionSymbol="p_ColumnOfTable.80"/>
+</instance>
+<instance id="CAST_AST_ANSISQL_GenericColumnReference.65" instanceOf="CAST_AST_ANSISQL_GenericColumnReference">
+ <CAST_AST_ANSISQL_WithOrder order=""/>
+ <CAST_AST_WithParent parentAST="p_Constraint.116"/>
+ <CAST_AST_WithResolutionSymbolReference resolutionSymbol="p_ColumnOfTable.81"/>
+</instance>
+<instance id="CAST_AST_ANSISQL_GenericColumnReference.66" instanceOf="CAST_AST_ANSISQL_GenericColumnReference">
+ <CAST_AST_ANSISQL_WithOrder order=""/>
+ <CAST_AST_WithParent parentAST="p_Constraint.117"/>
+ <CAST_AST_WithResolutionSymbolReference resolutionSymbol="p_ColumnOfTable.82"/>
+</instance>
+<instance id="CAST_AST_ANSISQL_GenericColumnReference.67" instanceOf="CAST_AST_ANSISQL_GenericColumnReference">
+ <CAST_AST_ANSISQL_WithOrder order=""/>
+ <CAST_AST_WithParent parentAST="p_Constraint.118"/>
+ <CAST_AST_WithResolutionSymbolReference resolutionSymbol="p_ColumnOfTable.83"/>
+</instance>
+<instance id="CAST_AST_ANSISQL_GenericColumnReference.68" instanceOf="CAST_AST_ANSISQL_GenericColumnReference">
+ <CAST_AST_ANSISQL_WithOrder order=""/>
+ <CAST_AST_WithParent parentAST="p_Constraint.119"/>
+ <CAST_AST_WithResolutionSymbolReference resolutionSymbol="p_ColumnOfTable.84"/>
+</instance>
+<instance id="CAST_AST_ANSISQL_GenericColumnReference.69" instanceOf="CAST_AST_ANSISQL_GenericColumnReference">
+ <CAST_AST_ANSISQL_WithOrder order=""/>
+ <CAST_AST_WithParent parentAST="p_Constraint.120"/>
+ <CAST_AST_WithResolutionSymbolReference resolutionSymbol="p_ColumnOfTable.85"/>
+</instance>
+<instance id="CAST_AST_ANSISQL_GenericColumnReference.70" instanceOf="CAST_AST_ANSISQL_GenericColumnReference">
+ <CAST_AST_ANSISQL_WithOrder order=""/>
+ <CAST_AST_WithParent parentAST="p_Constraint.121"/>
+ <CAST_AST_WithResolutionSymbolReference resolutionSymbol="p_ColumnOfTable.86"/>
+</instance>
+<instance id="CAST_AST_ANSISQL_GenericColumnReference.71" instanceOf="CAST_AST_ANSISQL_GenericColumnReference">
+ <CAST_AST_ANSISQL_WithOrder order=""/>
+ <CAST_AST_WithParent parentAST="p_Constraint.122"/>
+ <CAST_AST_WithResolutionSymbolReference resolutionSymbol="p_ColumnOfTable.87"/>
+</instance>
+<instance id="CAST_AST_ANSISQL_GenericColumnReference.72" instanceOf="CAST_AST_ANSISQL_GenericColumnReference">
+ <CAST_AST_ANSISQL_WithOrder order=""/>
+ <CAST_AST_WithParent parentAST="p_Constraint.123"/>
+ <CAST_AST_WithResolutionSymbolReference resolutionSymbol="p_ColumnOfTable.88"/>
+</instance>
+<instance id="CAST_AST_ANSISQL_GenericColumnReference.73" instanceOf="CAST_AST_ANSISQL_GenericColumnReference">
+ <CAST_AST_ANSISQL_WithOrder order=""/>
+ <CAST_AST_WithParent parentAST="p_Constraint.124"/>
+ <CAST_AST_WithResolutionSymbolReference resolutionSymbol="p_ColumnOfTable.89"/>
+</instance>
+<instance id="CAST_AST_ANSISQL_GenericColumnReference.74" instanceOf="CAST_AST_ANSISQL_GenericColumnReference">
+ <CAST_AST_ANSISQL_WithOrder order=""/>
+ <CAST_AST_WithParent parentAST="p_Constraint.125"/>
+ <CAST_AST_WithResolutionSymbolReference resolutionSymbol="p_ColumnOfTable.90"/>
+</instance>
+<instance id="CAST_AST_ANSISQL_GenericColumnReference.75" instanceOf="CAST_AST_ANSISQL_GenericColumnReference">
+ <CAST_AST_ANSISQL_WithOrder order=""/>
+ <CAST_AST_WithParent parentAST="p_Constraint.126"/>
+ <CAST_AST_WithResolutionSymbolReference resolutionSymbol="p_ColumnOfTable.91"/>
+</instance>
+<instance id="CAST_AST_ANSISQL_GenericColumnReference.76" instanceOf="CAST_AST_ANSISQL_GenericColumnReference">
+ <CAST_AST_ANSISQL_WithOrder order=""/>
+ <CAST_AST_WithParent parentAST="p_Constraint.127"/>
+ <CAST_AST_WithResolutionSymbolReference resolutionSymbol="p_ColumnOfTable.92"/>
+</instance>
+<instance id="p_Constraint.65" instanceOf="CAST_Oracle_PrimaryKeyConstraint">
+ <CAST_SQL_Object version="10.2.0.4.0"/>
+ <CAST_Resolution_Identification resolutionName="PRIMARY_67"/>
+ <CAST_Symbol_WithParent parent="VASTCreateTable.11"/>
+ <CAST_ANSISQL_Constraint nameIsDefinedByDBMS="0"/>
+</instance>
+<instance id="p_Constraint.110" instanceOf="CAST_Oracle_CheckConstraint">
+ <CAST_SQL_Object version="10.2.0.4.0"/>
+ <CAST_ANSISQL_CheckConstraint conditionExpression="&quot;CENTRAL_SEQUENCER_ID&quot; IS NOT NULL"/>
+ <CAST_Resolution_Identification resolutionName="SYS_C005226"/>
+ <CAST_Symbol_WithParent parent="VASTCreateTable.11"/>
+ <CAST_ANSISQL_Constraint nameIsDefinedByDBMS="1"/>
+</instance>
+<instance id="p_Constraint.111" instanceOf="CAST_Oracle_CheckConstraint">
+ <CAST_SQL_Object version="10.2.0.4.0"/>
+ <CAST_ANSISQL_CheckConstraint conditionExpression="&quot;CUST_BASKET_ID_NEXT_VALUE&quot; IS NOT NULL"/>
+ <CAST_Resolution_Identification resolutionName="SYS_C005227"/>
+ <CAST_Symbol_WithParent parent="VASTCreateTable.11"/>
+ <CAST_ANSISQL_Constraint nameIsDefinedByDBMS="1"/>
+</instance>
+<instance id="p_Constraint.112" instanceOf="CAST_Oracle_CheckConstraint">
+ <CAST_SQL_Object version="10.2.0.4.0"/>
+ <CAST_ANSISQL_CheckConstraint conditionExpression="&quot;CUST_BASKET_ATTR_ID_NEXT_VAL&quot; IS NOT NULL"/>
+ <CAST_Resolution_Identification resolutionName="SYS_C005228"/>
+ <CAST_Symbol_WithParent parent="VASTCreateTable.11"/>
+ <CAST_ANSISQL_Constraint nameIsDefinedByDBMS="1"/>
+</instance>
+<instance id="p_Constraint.113" instanceOf="CAST_Oracle_CheckConstraint">
+ <CAST_SQL_Object version="10.2.0.4.0"/>
+ <CAST_ANSISQL_CheckConstraint conditionExpression="&quot;MERCHANT_CONF_ID_NEXT_VAL&quot; IS NOT NULL"/>
+ <CAST_Resolution_Identification resolutionName="SYS_C005229"/>
+ <CAST_Symbol_WithParent parent="VASTCreateTable.11"/>
+ <CAST_ANSISQL_Constraint nameIsDefinedByDBMS="1"/>
+</instance>
+<instance id="p_Constraint.114" instanceOf="CAST_Oracle_CheckConstraint">
+ <CAST_SQL_Object version="10.2.0.4.0"/>
+ <CAST_ANSISQL_CheckConstraint conditionExpression="&quot;MERCHANT_USER_INFO_ID_NEXT_VAL&quot; IS NOT NULL"/>
+ <CAST_Resolution_Identification resolutionName="SYS_C005230"/>
+ <CAST_Symbol_WithParent parent="VASTCreateTable.11"/>
+ <CAST_ANSISQL_Constraint nameIsDefinedByDBMS="1"/>
+</instance>
+<instance id="p_Constraint.115" instanceOf="CAST_Oracle_CheckConstraint">
+ <CAST_SQL_Object version="10.2.0.4.0"/>
+ <CAST_ANSISQL_CheckConstraint conditionExpression="&quot;CATEGORY_ID_NEXT_VALUE&quot; IS NOT NULL"/>
+ <CAST_Resolution_Identification resolutionName="SYS_C005231"/>
+ <CAST_Symbol_WithParent parent="VASTCreateTable.11"/>
+ <CAST_ANSISQL_Constraint nameIsDefinedByDBMS="1"/>
+</instance>
+<instance id="p_Constraint.116" instanceOf="CAST_Oracle_CheckConstraint">
+ <CAST_SQL_Object version="10.2.0.4.0"/>
+ <CAST_ANSISQL_CheckConstraint conditionExpression="&quot;PRODUCT_ID_NEXT_VALUE&quot; IS NOT NULL"/>
+ <CAST_Resolution_Identification resolutionName="SYS_C005232"/>
+ <CAST_Symbol_WithParent parent="VASTCreateTable.11"/>
+ <CAST_ANSISQL_Constraint nameIsDefinedByDBMS="1"/>
+</instance>
+<instance id="p_Constraint.117" instanceOf="CAST_Oracle_CheckConstraint">
+ <CAST_SQL_Object version="10.2.0.4.0"/>
+ <CAST_ANSISQL_CheckConstraint conditionExpression="&quot;PRODUCT_OPTIONS_ID_NEXT_VALUE&quot; IS NOT NULL"/>
+ <CAST_Resolution_Identification resolutionName="SYS_C005233"/>
+ <CAST_Symbol_WithParent parent="VASTCreateTable.11"/>
+ <CAST_ANSISQL_Constraint nameIsDefinedByDBMS="1"/>
+</instance>
+<instance id="p_Constraint.118" instanceOf="CAST_Oracle_CheckConstraint">
+ <CAST_SQL_Object version="10.2.0.4.0"/>
+ <CAST_ANSISQL_CheckConstraint conditionExpression="&quot;PRODUCT_ATTR_ID_NEXT_VAL&quot; IS NOT NULL"/>
+ <CAST_Resolution_Identification resolutionName="SYS_C005234"/>
+ <CAST_Symbol_WithParent parent="VASTCreateTable.11"/>
+ <CAST_ANSISQL_Constraint nameIsDefinedByDBMS="1"/>
+</instance>
+<instance id="p_Constraint.119" instanceOf="CAST_Oracle_CheckConstraint">
+ <CAST_SQL_Object version="10.2.0.4.0"/>
+ <CAST_ANSISQL_CheckConstraint conditionExpression="&quot;PRODUCT_PRICE_ID_NEXT_VAL&quot; IS NOT NULL"/>
+ <CAST_Resolution_Identification resolutionName="SYS_C005235"/>
+ <CAST_Symbol_WithParent parent="VASTCreateTable.11"/>
+ <CAST_ANSISQL_Constraint nameIsDefinedByDBMS="1"/>
+</instance>
+<instance id="p_Constraint.120" instanceOf="CAST_Oracle_CheckConstraint">
+ <CAST_SQL_Object version="10.2.0.4.0"/>
+ <CAST_ANSISQL_CheckConstraint conditionExpression="&quot;GEO_ZONE_ID_NEXT_VALUE&quot; IS NOT NULL"/>
+ <CAST_Resolution_Identification resolutionName="SYS_C005236"/>
+ <CAST_Symbol_WithParent parent="VASTCreateTable.11"/>
+ <CAST_ANSISQL_Constraint nameIsDefinedByDBMS="1"/>
+</instance>
+<instance id="p_Constraint.121" instanceOf="CAST_Oracle_CheckConstraint">
+ <CAST_SQL_Object version="10.2.0.4.0"/>
+ <CAST_ANSISQL_CheckConstraint conditionExpression="&quot;TAX_RATE_ID_NEXT_VALUE&quot; IS NOT NULL"/>
+ <CAST_Resolution_Identification resolutionName="SYS_C005237"/>
+ <CAST_Symbol_WithParent parent="VASTCreateTable.11"/>
+ <CAST_ANSISQL_Constraint nameIsDefinedByDBMS="1"/>
+</instance>
+<instance id="p_Constraint.122" instanceOf="CAST_Oracle_CheckConstraint">
+ <CAST_SQL_Object version="10.2.0.4.0"/>
+ <CAST_ANSISQL_CheckConstraint conditionExpression="&quot;PRODUCT_OPTION_ID_NEXT_VALUE&quot; IS NOT NULL"/>
+ <CAST_Resolution_Identification resolutionName="SYS_C005238"/>
+ <CAST_Symbol_WithParent parent="VASTCreateTable.11"/>
+ <CAST_ANSISQL_Constraint nameIsDefinedByDBMS="1"/>
+</instance>
+<instance id="p_Constraint.123" instanceOf="CAST_Oracle_CheckConstraint">
+ <CAST_SQL_Object version="10.2.0.4.0"/>
+ <CAST_ANSISQL_CheckConstraint conditionExpression="&quot;PRODUCT_OPT_VALUES_ID_NEXT_VAL&quot; IS NOT NULL"/>
+ <CAST_Resolution_Identification resolutionName="SYS_C005239"/>
+ <CAST_Symbol_WithParent parent="VASTCreateTable.11"/>
+ <CAST_ANSISQL_Constraint nameIsDefinedByDBMS="1"/>
+</instance>
+<instance id="p_Constraint.124" instanceOf="CAST_Oracle_CheckConstraint">
+ <CAST_SQL_Object version="10.2.0.4.0"/>
+ <CAST_ANSISQL_CheckConstraint conditionExpression="&quot;ORDER_ID_NEXT_VALUE&quot; IS NOT NULL"/>
+ <CAST_Resolution_Identification resolutionName="SYS_C005240"/>
+ <CAST_Symbol_WithParent parent="VASTCreateTable.11"/>
+ <CAST_ANSISQL_Constraint nameIsDefinedByDBMS="1"/>
+</instance>
+<instance id="p_Constraint.125" instanceOf="CAST_Oracle_CheckConstraint">
+ <CAST_SQL_Object version="10.2.0.4.0"/>
+ <CAST_ANSISQL_CheckConstraint conditionExpression="&quot;CUSTOMER_ID_NEXT_VALUE&quot; IS NOT NULL"/>
+ <CAST_Resolution_Identification resolutionName="SYS_C005241"/>
+ <CAST_Symbol_WithParent parent="VASTCreateTable.11"/>
+ <CAST_ANSISQL_Constraint nameIsDefinedByDBMS="1"/>
+</instance>
+<instance id="p_Constraint.126" instanceOf="CAST_Oracle_CheckConstraint">
+ <CAST_SQL_Object version="10.2.0.4.0"/>
+ <CAST_ANSISQL_CheckConstraint conditionExpression="&quot;ORDER_TOTAL_ID_NEXT_VALUE&quot; IS NOT NULL"/>
+ <CAST_Resolution_Identification resolutionName="SYS_C005242"/>
+ <CAST_Symbol_WithParent parent="VASTCreateTable.11"/>
+ <CAST_ANSISQL_Constraint nameIsDefinedByDBMS="1"/>
+</instance>
+<instance id="p_Constraint.127" instanceOf="CAST_Oracle_CheckConstraint">
+ <CAST_SQL_Object version="10.2.0.4.0"/>
+ <CAST_ANSISQL_CheckConstraint conditionExpression="&quot;ORDER_PRODUCT_ID_NEXT_VALUE&quot; IS NOT NULL"/>
+ <CAST_Resolution_Identification resolutionName="SYS_C005243"/>
+ <CAST_Symbol_WithParent parent="VASTCreateTable.11"/>
+ <CAST_ANSISQL_Constraint nameIsDefinedByDBMS="1"/>
+</instance>
+<instance id="p_Constraint.128" instanceOf="CAST_Oracle_CheckConstraint">
+ <CAST_SQL_Object version="10.2.0.4.0"/>
+ <CAST_ANSISQL_CheckConstraint conditionExpression="&quot;ORDER_PRD_PRICE_ID_NEXT_VAL&quot; IS NOT NULL"/>
+ <CAST_Resolution_Identification resolutionName="SYS_C005244"/>
+ <CAST_Symbol_WithParent parent="VASTCreateTable.11"/>
+ <CAST_ANSISQL_Constraint nameIsDefinedByDBMS="1"/>
+</instance>
+<instance id="p_Constraint.129" instanceOf="CAST_Oracle_CheckConstraint">
+ <CAST_SQL_Object version="10.2.0.4.0"/>
+ <CAST_ANSISQL_CheckConstraint conditionExpression="&quot;ORDER_PRODUCT_ATTR_ID_NEXT_VAL&quot; IS NOT NULL"/>
+ <CAST_Resolution_Identification resolutionName="SYS_C005245"/>
+ <CAST_Symbol_WithParent parent="VASTCreateTable.11"/>
+ <CAST_ANSISQL_Constraint nameIsDefinedByDBMS="1"/>
+</instance>
+<instance id="p_Constraint.130" instanceOf="CAST_Oracle_CheckConstraint">
+ <CAST_SQL_Object version="10.2.0.4.0"/>
+ <CAST_ANSISQL_CheckConstraint conditionExpression="&quot;ORDER_PRODUCT_DL_ID_NEXT_VALUE&quot; IS NOT NULL"/>
+ <CAST_Resolution_Identification resolutionName="SYS_C005246"/>
+ <CAST_Symbol_WithParent parent="VASTCreateTable.11"/>
+ <CAST_ANSISQL_Constraint nameIsDefinedByDBMS="1"/>
+</instance>
+<instance id="p_Constraint.131" instanceOf="CAST_Oracle_CheckConstraint">
+ <CAST_SQL_Object version="10.2.0.4.0"/>
+ <CAST_ANSISQL_CheckConstraint conditionExpression="&quot;ORDER_ACCOUNT_ID_NEXT_VALUE&quot; IS NOT NULL"/>
+ <CAST_Resolution_Identification resolutionName="SYS_C005247"/>
+ <CAST_Symbol_WithParent parent="VASTCreateTable.11"/>
+ <CAST_ANSISQL_Constraint nameIsDefinedByDBMS="1"/>
+</instance>
+<instance id="p_Constraint.132" instanceOf="CAST_Oracle_CheckConstraint">
+ <CAST_SQL_Object version="10.2.0.4.0"/>
+ <CAST_ANSISQL_CheckConstraint conditionExpression="&quot;ORDER_ACCOUNT_PRD_ID_NEXT_VAL&quot; IS NOT NULL"/>
+ <CAST_Resolution_Identification resolutionName="SYS_C005248"/>
+ <CAST_Symbol_WithParent parent="VASTCreateTable.11"/>
+ <CAST_ANSISQL_Constraint nameIsDefinedByDBMS="1"/>
+</instance>
+<instance id="p_Constraint.133" instanceOf="CAST_Oracle_CheckConstraint">
+ <CAST_SQL_Object version="10.2.0.4.0"/>
+ <CAST_ANSISQL_CheckConstraint conditionExpression="&quot;ORDER_ACCNT_PRD_PRICE_ID_N_VAL&quot; IS NOT NULL"/>
+ <CAST_Resolution_Identification resolutionName="SYS_C005249"/>
+ <CAST_Symbol_WithParent parent="VASTCreateTable.11"/>
+ <CAST_ANSISQL_Constraint nameIsDefinedByDBMS="1"/>
+</instance>
+<instance id="p_Constraint.134" instanceOf="CAST_Oracle_CheckConstraint">
+ <CAST_SQL_Object version="10.2.0.4.0"/>
+ <CAST_ANSISQL_CheckConstraint conditionExpression="&quot;ORDER_ACCNT_PRD_ATTR_ID_N_VAL&quot; IS NOT NULL"/>
+ <CAST_Resolution_Identification resolutionName="SYS_C005250"/>
+ <CAST_Symbol_WithParent parent="VASTCreateTable.11"/>
+ <CAST_ANSISQL_Constraint nameIsDefinedByDBMS="1"/>
+</instance>
+<instance id="p_Constraint.135" instanceOf="CAST_Oracle_CheckConstraint">
+ <CAST_SQL_Object version="10.2.0.4.0"/>
+ <CAST_ANSISQL_CheckConstraint conditionExpression="&quot;PRODUCT_SPECIAL_NEXT_VALUE&quot; IS NOT NULL"/>
+ <CAST_Resolution_Identification resolutionName="SYS_C005251"/>
+ <CAST_Symbol_WithParent parent="VASTCreateTable.11"/>
+ <CAST_ANSISQL_Constraint nameIsDefinedByDBMS="1"/>
+</instance>
+<instance id="p_Constraint.136" instanceOf="CAST_Oracle_CheckConstraint">
+ <CAST_SQL_Object version="10.2.0.4.0"/>
+ <CAST_ANSISQL_CheckConstraint conditionExpression="&quot;DYNAMIC_LABEL_ID_NEXT_VALUE&quot; IS NOT NULL"/>
+ <CAST_Resolution_Identification resolutionName="SYS_C005252"/>
+ <CAST_Symbol_WithParent parent="VASTCreateTable.11"/>
+ <CAST_ANSISQL_Constraint nameIsDefinedByDBMS="1"/>
+</instance>
+<instance id="p_Constraint.137" instanceOf="CAST_Oracle_CheckConstraint">
+ <CAST_SQL_Object version="10.2.0.4.0"/>
+ <CAST_ANSISQL_CheckConstraint conditionExpression="&quot;GATEWAY_TRX_ID_NEXT_VALUE&quot; IS NOT NULL"/>
+ <CAST_Resolution_Identification resolutionName="SYS_C005253"/>
+ <CAST_Symbol_WithParent parent="VASTCreateTable.11"/>
+ <CAST_ANSISQL_Constraint nameIsDefinedByDBMS="1"/>
+</instance>
+<instance id="p_Constraint.138" instanceOf="CAST_Oracle_CheckConstraint">
+ <CAST_SQL_Object version="10.2.0.4.0"/>
+ <CAST_ANSISQL_CheckConstraint conditionExpression="&quot;REVIEW_ID_NEXT_VALUE&quot; IS NOT NULL"/>
+ <CAST_Resolution_Identification resolutionName="SYS_C005254"/>
+ <CAST_Symbol_WithParent parent="VASTCreateTable.11"/>
+ <CAST_ANSISQL_Constraint nameIsDefinedByDBMS="1"/>
+</instance>
+<instance id="p_Constraint.139" instanceOf="CAST_Oracle_CheckConstraint">
+ <CAST_SQL_Object version="10.2.0.4.0"/>
+ <CAST_ANSISQL_CheckConstraint conditionExpression="&quot;MERCHANTID_ID_NEXT_VALUE&quot; IS NOT NULL"/>
+ <CAST_Resolution_Identification resolutionName="SYS_C005255"/>
+ <CAST_Symbol_WithParent parent="VASTCreateTable.11"/>
+ <CAST_ANSISQL_Constraint nameIsDefinedByDBMS="1"/>
+</instance>
+<instance id="p_Constraint.140" instanceOf="CAST_Oracle_CheckConstraint">
+ <CAST_SQL_Object version="10.2.0.4.0"/>
+ <CAST_ANSISQL_CheckConstraint conditionExpression="&quot;CRA_ID_NEXT_VALUE&quot; IS NOT NULL"/>
+ <CAST_Resolution_Identification resolutionName="SYS_C005256"/>
+ <CAST_Symbol_WithParent parent="VASTCreateTable.11"/>
+ <CAST_ANSISQL_Constraint nameIsDefinedByDBMS="1"/>
+</instance>
+<instance id="p_Constraint.141" instanceOf="CAST_Oracle_CheckConstraint">
+ <CAST_SQL_Object version="10.2.0.4.0"/>
+ <CAST_ANSISQL_CheckConstraint conditionExpression="&quot;CIE_ID_NEXT_VALUE&quot; IS NOT NULL"/>
+ <CAST_Resolution_Identification resolutionName="SYS_C005257"/>
+ <CAST_Symbol_WithParent parent="VASTCreateTable.11"/>
+ <CAST_ANSISQL_Constraint nameIsDefinedByDBMS="1"/>
+</instance>
+<instance id="p_Constraint.142" instanceOf="CAST_Oracle_CheckConstraint">
+ <CAST_SQL_Object version="10.2.0.4.0"/>
+ <CAST_ANSISQL_CheckConstraint conditionExpression="&quot;MANUFACTURERS_ID_NEXT_VALUE&quot; IS NOT NULL"/>
+ <CAST_Resolution_Identification resolutionName="SYS_C005258"/>
+ <CAST_Symbol_WithParent parent="VASTCreateTable.11"/>
+ <CAST_ANSISQL_Constraint nameIsDefinedByDBMS="1"/>
+</instance>
+<instance id="p_Constraint.143" instanceOf="CAST_Oracle_CheckConstraint">
+ <CAST_SQL_Object version="10.2.0.4.0"/>
+ <CAST_ANSISQL_CheckConstraint conditionExpression="&quot;MRD_ID_NEXT_VALUE&quot; IS NOT NULL"/>
+ <CAST_Resolution_Identification resolutionName="SYS_C005259"/>
+ <CAST_Symbol_WithParent parent="VASTCreateTable.11"/>
+ <CAST_ANSISQL_Constraint nameIsDefinedByDBMS="1"/>
+</instance>
+<instance id="p_Constraint.144" instanceOf="CAST_Oracle_CheckConstraint">
+ <CAST_SQL_Object version="10.2.0.4.0"/>
+ <CAST_ANSISQL_CheckConstraint conditionExpression="&quot;MUR_ID_NEXT_VALUE&quot; IS NOT NULL"/>
+ <CAST_Resolution_Identification resolutionName="SYS_C005260"/>
+ <CAST_Symbol_WithParent parent="VASTCreateTable.11"/>
+ <CAST_ANSISQL_Constraint nameIsDefinedByDBMS="1"/>
+</instance>
+<instance id="p_Constraint.145" instanceOf="CAST_Oracle_CheckConstraint">
+ <CAST_SQL_Object version="10.2.0.4.0"/>
+ <CAST_ANSISQL_CheckConstraint conditionExpression="&quot;GTGZ_ID_NEXT_VALUE&quot; IS NOT NULL"/>
+ <CAST_Resolution_Identification resolutionName="SYS_C005261"/>
+ <CAST_Symbol_WithParent parent="VASTCreateTable.11"/>
+ <CAST_ANSISQL_Constraint nameIsDefinedByDBMS="1"/>
+</instance>
+<instance id="p_Constraint.146" instanceOf="CAST_Oracle_CheckConstraint">
+ <CAST_SQL_Object version="10.2.0.4.0"/>
+ <CAST_ANSISQL_CheckConstraint conditionExpression="&quot;STATUS_HIST_ID_NEXT_VALUE&quot; IS NOT NULL"/>
+ <CAST_Resolution_Identification resolutionName="SYS_C005262"/>
+ <CAST_Symbol_WithParent parent="VASTCreateTable.11"/>
+ <CAST_ANSISQL_Constraint nameIsDefinedByDBMS="1"/>
+</instance>
+<instance id="p_Constraint.147" instanceOf="CAST_Oracle_CheckConstraint">
+ <CAST_SQL_Object version="10.2.0.4.0"/>
+ <CAST_ANSISQL_CheckConstraint conditionExpression="&quot;RELATIONSHIP_ID_NEXT_VALUE&quot; IS NOT NULL"/>
+ <CAST_Resolution_Identification resolutionName="SYS_C005263"/>
+ <CAST_Symbol_WithParent parent="VASTCreateTable.11"/>
+ <CAST_ANSISQL_Constraint nameIsDefinedByDBMS="1"/>
+</instance>
+<instance id="p_Constraint.148" instanceOf="CAST_Oracle_CheckConstraint">
+ <CAST_SQL_Object version="10.2.0.4.0"/>
+ <CAST_ANSISQL_CheckConstraint conditionExpression="&quot;TAXCLASS_ID_NEXT_VALUE&quot; IS NOT NULL"/>
+ <CAST_Resolution_Identification resolutionName="SYS_C005264"/>
+ <CAST_Symbol_WithParent parent="VASTCreateTable.11"/>
+ <CAST_ANSISQL_Constraint nameIsDefinedByDBMS="1"/>
+</instance>
+<instance id="CAST_AST_ANSISQL_ColumnDataTypeReference.75" instanceOf="CAST_AST_ANSISQL_ColumnDataTypeReference">
+ <CAST_AST_WithParent parentAST="p_ColumnOfTable.80"/>
+ <CAST_AST_WithResolutionSymbolReference resolutionSymbol="p_DataType.19"/>
+</instance>
+<instance id="CAST_AST_ANSISQL_ColumnDataTypeReference.76" instanceOf="CAST_AST_ANSISQL_ColumnDataTypeReference">
+ <CAST_AST_WithParent parentAST="p_ColumnOfTable.75"/>
+ <CAST_AST_WithResolutionSymbolReference resolutionSymbol="p_DataType.19"/>
+</instance>
+<instance id="CAST_AST_ANSISQL_ColumnDataTypeReference.77" instanceOf="CAST_AST_ANSISQL_ColumnDataTypeReference">
+ <CAST_AST_WithParent parentAST="p_ColumnOfTable.106"/>
+ <CAST_AST_WithResolutionSymbolReference resolutionSymbol="p_DataType.19"/>
+</instance>
+<instance id="CAST_AST_ANSISQL_ColumnDataTypeReference.78" instanceOf="CAST_AST_ANSISQL_ColumnDataTypeReference">
+ <CAST_AST_WithParent parentAST="p_ColumnOfTable.105"/>
+ <CAST_AST_WithResolutionSymbolReference resolutionSymbol="p_DataType.19"/>
+</instance>
+<instance id="CAST_AST_ANSISQL_ColumnDataTypeReference.79" instanceOf="CAST_AST_ANSISQL_ColumnDataTypeReference">
+ <CAST_AST_WithParent parentAST="p_ColumnOfTable.90"/>
+ <CAST_AST_WithResolutionSymbolReference resolutionSymbol="p_DataType.19"/>
+</instance>
+<instance id="CAST_AST_ANSISQL_ColumnDataTypeReference.80" instanceOf="CAST_AST_ANSISQL_ColumnDataTypeReference">
+ <CAST_AST_WithParent parentAST="p_ColumnOfTable.77"/>
+ <CAST_AST_WithResolutionSymbolReference resolutionSymbol="p_DataType.19"/>
+</instance>
+<instance id="CAST_AST_ANSISQL_ColumnDataTypeReference.81" instanceOf="CAST_AST_ANSISQL_ColumnDataTypeReference">
+ <CAST_AST_WithParent parentAST="p_ColumnOfTable.76"/>
+ <CAST_AST_WithResolutionSymbolReference resolutionSymbol="p_DataType.19"/>
+</instance>
+<instance id="CAST_AST_ANSISQL_ColumnDataTypeReference.82" instanceOf="CAST_AST_ANSISQL_ColumnDataTypeReference">
+ <CAST_AST_WithParent parentAST="p_ColumnOfTable.101"/>
+ <CAST_AST_WithResolutionSymbolReference resolutionSymbol="p_DataType.19"/>
+</instance>
+<instance id="CAST_AST_ANSISQL_ColumnDataTypeReference.83" instanceOf="CAST_AST_ANSISQL_ColumnDataTypeReference">
+ <CAST_AST_WithParent parentAST="p_ColumnOfTable.102"/>
+ <CAST_AST_WithResolutionSymbolReference resolutionSymbol="p_DataType.19"/>
+</instance>
+<instance id="CAST_AST_ANSISQL_ColumnDataTypeReference.84" instanceOf="CAST_AST_ANSISQL_ColumnDataTypeReference">
+ <CAST_AST_WithParent parentAST="p_ColumnOfTable.85"/>
+ <CAST_AST_WithResolutionSymbolReference resolutionSymbol="p_DataType.19"/>
+</instance>
+<instance id="CAST_AST_ANSISQL_ColumnDataTypeReference.85" instanceOf="CAST_AST_ANSISQL_ColumnDataTypeReference">
+ <CAST_AST_WithParent parentAST="p_ColumnOfTable.110"/>
+ <CAST_AST_WithResolutionSymbolReference resolutionSymbol="p_DataType.19"/>
+</instance>
+<instance id="CAST_AST_ANSISQL_ColumnDataTypeReference.86" instanceOf="CAST_AST_ANSISQL_ColumnDataTypeReference">
+ <CAST_AST_WithParent parentAST="p_ColumnOfTable.107"/>
+ <CAST_AST_WithResolutionSymbolReference resolutionSymbol="p_DataType.19"/>
+</instance>
+<instance id="CAST_AST_ANSISQL_ColumnDataTypeReference.87" instanceOf="CAST_AST_ANSISQL_ColumnDataTypeReference">
+ <CAST_AST_WithParent parentAST="p_ColumnOfTable.104"/>
+ <CAST_AST_WithResolutionSymbolReference resolutionSymbol="p_DataType.19"/>
+</instance>
+<instance id="CAST_AST_ANSISQL_ColumnDataTypeReference.88" instanceOf="CAST_AST_ANSISQL_ColumnDataTypeReference">
+ <CAST_AST_WithParent parentAST="p_ColumnOfTable.78"/>
+ <CAST_AST_WithResolutionSymbolReference resolutionSymbol="p_DataType.19"/>
+</instance>
+<instance id="CAST_AST_ANSISQL_ColumnDataTypeReference.89" instanceOf="CAST_AST_ANSISQL_ColumnDataTypeReference">
+ <CAST_AST_WithParent parentAST="p_ColumnOfTable.79"/>
+ <CAST_AST_WithResolutionSymbolReference resolutionSymbol="p_DataType.19"/>
+</instance>
+<instance id="CAST_AST_ANSISQL_ColumnDataTypeReference.90" instanceOf="CAST_AST_ANSISQL_ColumnDataTypeReference">
+ <CAST_AST_WithParent parentAST="p_ColumnOfTable.108"/>
+ <CAST_AST_WithResolutionSymbolReference resolutionSymbol="p_DataType.19"/>
+</instance>
+<instance id="CAST_AST_ANSISQL_ColumnDataTypeReference.91" instanceOf="CAST_AST_ANSISQL_ColumnDataTypeReference">
+ <CAST_AST_WithParent parentAST="p_ColumnOfTable.109"/>
+ <CAST_AST_WithResolutionSymbolReference resolutionSymbol="p_DataType.19"/>
+</instance>
+<instance id="CAST_AST_ANSISQL_ColumnDataTypeReference.92" instanceOf="CAST_AST_ANSISQL_ColumnDataTypeReference">
+ <CAST_AST_WithParent parentAST="p_ColumnOfTable.99"/>
+ <CAST_AST_WithResolutionSymbolReference resolutionSymbol="p_DataType.19"/>
+</instance>
+<instance id="CAST_AST_ANSISQL_ColumnDataTypeReference.93" instanceOf="CAST_AST_ANSISQL_ColumnDataTypeReference">
+ <CAST_AST_WithParent parentAST="p_ColumnOfTable.98"/>
+ <CAST_AST_WithResolutionSymbolReference resolutionSymbol="p_DataType.19"/>
+</instance>
+<instance id="CAST_AST_ANSISQL_ColumnDataTypeReference.94" instanceOf="CAST_AST_ANSISQL_ColumnDataTypeReference">
+ <CAST_AST_WithParent parentAST="p_ColumnOfTable.96"/>
+ <CAST_AST_WithResolutionSymbolReference resolutionSymbol="p_DataType.19"/>
+</instance>
+<instance id="CAST_AST_ANSISQL_ColumnDataTypeReference.95" instanceOf="CAST_AST_ANSISQL_ColumnDataTypeReference">
+ <CAST_AST_WithParent parentAST="p_ColumnOfTable.97"/>
+ <CAST_AST_WithResolutionSymbolReference resolutionSymbol="p_DataType.19"/>
+</instance>
+<instance id="CAST_AST_ANSISQL_ColumnDataTypeReference.96" instanceOf="CAST_AST_ANSISQL_ColumnDataTypeReference">
+ <CAST_AST_WithParent parentAST="p_ColumnOfTable.89"/>
+ <CAST_AST_WithResolutionSymbolReference resolutionSymbol="p_DataType.19"/>
+</instance>
+<instance id="CAST_AST_ANSISQL_ColumnDataTypeReference.97" instanceOf="CAST_AST_ANSISQL_ColumnDataTypeReference">
+ <CAST_AST_WithParent parentAST="p_ColumnOfTable.93"/>
+ <CAST_AST_WithResolutionSymbolReference resolutionSymbol="p_DataType.19"/>
+</instance>
+<instance id="CAST_AST_ANSISQL_ColumnDataTypeReference.98" instanceOf="CAST_AST_ANSISQL_ColumnDataTypeReference">
+ <CAST_AST_WithParent parentAST="p_ColumnOfTable.94"/>
+ <CAST_AST_WithResolutionSymbolReference resolutionSymbol="p_DataType.19"/>
+</instance>
+<instance id="CAST_AST_ANSISQL_ColumnDataTypeReference.99" instanceOf="CAST_AST_ANSISQL_ColumnDataTypeReference">
+ <CAST_AST_WithParent parentAST="p_ColumnOfTable.95"/>
+ <CAST_AST_WithResolutionSymbolReference resolutionSymbol="p_DataType.19"/>
+</instance>
+<instance id="CAST_AST_ANSISQL_ColumnDataTypeReference.100" instanceOf="CAST_AST_ANSISQL_ColumnDataTypeReference">
+ <CAST_AST_WithParent parentAST="p_ColumnOfTable.92"/>
+ <CAST_AST_WithResolutionSymbolReference resolutionSymbol="p_DataType.19"/>
+</instance>
+<instance id="CAST_AST_ANSISQL_ColumnDataTypeReference.101" instanceOf="CAST_AST_ANSISQL_ColumnDataTypeReference">
+ <CAST_AST_WithParent parentAST="p_ColumnOfTable.91"/>
+ <CAST_AST_WithResolutionSymbolReference resolutionSymbol="p_DataType.19"/>
+</instance>
+<instance id="CAST_AST_ANSISQL_ColumnDataTypeReference.102" instanceOf="CAST_AST_ANSISQL_ColumnDataTypeReference">
+ <CAST_AST_WithParent parentAST="p_ColumnOfTable.83"/>
+ <CAST_AST_WithResolutionSymbolReference resolutionSymbol="p_DataType.19"/>
+</instance>
+<instance id="CAST_AST_ANSISQL_ColumnDataTypeReference.103" instanceOf="CAST_AST_ANSISQL_ColumnDataTypeReference">
+ <CAST_AST_WithParent parentAST="p_ColumnOfTable.81"/>
+ <CAST_AST_WithResolutionSymbolReference resolutionSymbol="p_DataType.19"/>
+</instance>
+<instance id="CAST_AST_ANSISQL_ColumnDataTypeReference.104" instanceOf="CAST_AST_ANSISQL_ColumnDataTypeReference">
+ <CAST_AST_WithParent parentAST="p_ColumnOfTable.82"/>
+ <CAST_AST_WithResolutionSymbolReference resolutionSymbol="p_DataType.19"/>
+</instance>
+<instance id="CAST_AST_ANSISQL_ColumnDataTypeReference.105" instanceOf="CAST_AST_ANSISQL_ColumnDataTypeReference">
+ <CAST_AST_WithParent parentAST="p_ColumnOfTable.87"/>
+ <CAST_AST_WithResolutionSymbolReference resolutionSymbol="p_DataType.19"/>
+</instance>
+<instance id="CAST_AST_ANSISQL_ColumnDataTypeReference.106" instanceOf="CAST_AST_ANSISQL_ColumnDataTypeReference">
+ <CAST_AST_WithParent parentAST="p_ColumnOfTable.88"/>
+ <CAST_AST_WithResolutionSymbolReference resolutionSymbol="p_DataType.19"/>
+</instance>
+<instance id="CAST_AST_ANSISQL_ColumnDataTypeReference.107" instanceOf="CAST_AST_ANSISQL_ColumnDataTypeReference">
+ <CAST_AST_WithParent parentAST="p_ColumnOfTable.84"/>
+ <CAST_AST_WithResolutionSymbolReference resolutionSymbol="p_DataType.19"/>
+</instance>
+<instance id="CAST_AST_ANSISQL_ColumnDataTypeReference.108" instanceOf="CAST_AST_ANSISQL_ColumnDataTypeReference">
+ <CAST_AST_WithParent parentAST="p_ColumnOfTable.100"/>
+ <CAST_AST_WithResolutionSymbolReference resolutionSymbol="p_DataType.19"/>
+</instance>
+<instance id="CAST_AST_ANSISQL_ColumnDataTypeReference.109" instanceOf="CAST_AST_ANSISQL_ColumnDataTypeReference">
+ <CAST_AST_WithParent parentAST="p_ColumnOfTable.112"/>
+ <CAST_AST_WithResolutionSymbolReference resolutionSymbol="p_DataType.19"/>
+</instance>
+<instance id="CAST_AST_ANSISQL_ColumnDataTypeReference.110" instanceOf="CAST_AST_ANSISQL_ColumnDataTypeReference">
+ <CAST_AST_WithParent parentAST="p_ColumnOfTable.103"/>
+ <CAST_AST_WithResolutionSymbolReference resolutionSymbol="p_DataType.19"/>
+</instance>
+<instance id="CAST_AST_ANSISQL_ColumnDataTypeReference.111" instanceOf="CAST_AST_ANSISQL_ColumnDataTypeReference">
+ <CAST_AST_WithParent parentAST="p_ColumnOfTable.111"/>
+ <CAST_AST_WithResolutionSymbolReference resolutionSymbol="p_DataType.19"/>
+</instance>
+<instance id="CAST_AST_ANSISQL_ColumnDataTypeReference.112" instanceOf="CAST_AST_ANSISQL_ColumnDataTypeReference">
+ <CAST_AST_WithParent parentAST="p_ColumnOfTable.113"/>
+ <CAST_AST_WithResolutionSymbolReference resolutionSymbol="p_DataType.19"/>
+</instance>
+<instance id="CAST_AST_ANSISQL_ColumnDataTypeReference.113" instanceOf="CAST_AST_ANSISQL_ColumnDataTypeReference">
+ <CAST_AST_WithParent parentAST="p_ColumnOfTable.86"/>
+ <CAST_AST_WithResolutionSymbolReference resolutionSymbol="p_DataType.19"/>
+</instance>
+</instances>

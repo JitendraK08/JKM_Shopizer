@@ -1,0 +1,26 @@
+CREATE OR REPLACE TRIGGER CORE_MODULES_SERVICES_CORE_M_1 BEFORE INSERT OR UPDATE ON CORE_MODULES_SERVICES
+FOR EACH ROW
+DECLARE 
+v_newVal NUMBER(12) := 0
+v_incval NUMBER(12) := 0
+BEGIN
+  IF INSERTING AND :new.CORE_MD_SERVICES_ID IS NULL THEN
+    SELECT  CORE_MODULES_SERVICES_CORE_MD_.NEXTVAL INTO v_newVal FROM DUAL
+    -- If this is the first time this table have been inserted into (sequence == 1)
+    IF v_newVal = 1 THEN 
+      --get the max indentity value from the table
+      SELECT NVL(max(CORE_MD_SERVICES_ID),0) INTO v_newVal FROM CORE_MODULES_SERVICES
+      v_newVal := v_newVal + 1
+      --set the sequence to that value
+      LOOP
+           EXIT WHEN v_incval>=v_newVal
+           SELECT CORE_MODULES_SERVICES_CORE_MD_.nextval INTO v_incval FROM dual
+      END LOOP
+    END IF
+    --used to emulate LAST_INSERT_ID()
+    --mysql_utilities.identity := v_newVal; 
+   -- assign the value from the sequence to emulate the identity column
+   :new.CORE_MD_SERVICES_ID := v_newVal
+  END IF
+END
+

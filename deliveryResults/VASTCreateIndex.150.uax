@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<instances>
+ <instance id="VASTCreateIndex.150" instanceOf="CAST_Oracle_Index">
+  <CAST_AST_Oracle_WithKeyCompression compressionType="1"/>
+  <CAST_SQL_Object version="10.2.0.4.0" owner="SHOPIZER" objectId="52001"/>
+  <CAST_AST_Oracle_StorageClause initialValue="65536" nextValue="" minExtentsValue="1" pctincreaseValue="" freeListsValue="" freeListGroupsValue="" bufferPoolRecycle="" bufferPoolKeep="" bufferPoolDefault="1"/>
+  <CAST_AST_Oracle_WithParallelClause parallelizationType="1"/>
+  <CAST_AST_Oracle_WithPhysicalAttributesClause initransValue="2" pctfreeValue="10"/>
+  <CAST_AST_Oracle_WithLogginClause loggingClause="1"/>
+  <CAST_AST_ANSISQL_WithUniqueness unique=""/>
+  <CAST_Resolution_Identification resolutionName="IDX_PRODUCTS_DATE_AVAILABLE_SM"/>
+  <CAST_Symbol_WithParent parent="p_Schema.1"/>
+  <CAST_ANSISQL_Index indexedObject="VASTCreateTable.60"/>
+  <POSITIONABLE POSITIONS="CAST_TargetSourceFile.253(1,1,2,-1)"/>
+ </instance>
+ <instance id="CAST_TargetSourceFile.253" instanceOf="CAST_TargetSourceFile">
+  <bookmark source="VASTCreateIndex.150.src"/>
+  <shell fullPath="VASTCreateIndex.150.src"/>
+ </instance>
+<instance id="CAST_AST_ANSISQL_IndexTableReference.150" instanceOf="CAST_AST_ANSISQL_IndexTableReference">
+ <CAST_AST_WithParent parentAST="VASTCreateIndex.150"/>
+ <CAST_AST_WithResolutionSymbolReference resolutionSymbol="VASTCreateTable.60"/>
+</instance>
+<instance id="CAST_AST_ANSISQL_SortedColumnReference.184" instanceOf="CAST_AST_ANSISQL_SortedColumnReference">
+ <CAST_AST_ANSISQL_WithOrder order="1"/>
+ <CAST_AST_ANSISQL_SortOrder ordering="1"/>
+ <CAST_Named nameAST="PRODUCTS_DATE_AVAILABLE"/>
+ <CAST_AST_WithParent parentAST="VASTCreateIndex.150"/>
+ <CAST_AST_WithResolutionSymbolReference resolutionSymbol="p_ColumnOfTable.558"/>
+</instance>
+</instances>

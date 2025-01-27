@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+
+
+    <package name="customer" extends="struts-default" namespace="/customer">
+
+
+
+
+		<global-results>
+
+			<result name="GENERICERROR">/error.jsp</result>
+		  	 <result name="AUTHORIZATIONEXCEPTION" type="redirectAction">
+             	<param name="actionName">customerlist</param>
+             	<param name="namespace">/customer</param>
+         	</result>
+
+	   </global-results>
+
+
+
+
+        <action name="customerlist" class="com.salesmanager.central.customer.CustomerListAction" method="displayCustomerList">
+			<result>customerlist.jsp</result>
+			<result name="ERROR">customerlist.jsp</result>
+		</action>
+
+		<action name="customerdetails" class="com.salesmanager.central.customer.CustomerDetailsAction" method="displayCustomerDetails">
+			<result>customerdetails.jsp</result>
+			<result name="ERROR" type="redirectAction">
+            	<param name="actionName">customerlist</param>
+       		</result>
+		</action>
+
+		<action name="showselectcompany" class="com.salesmanager.central.customer.CustomerDetailsAction" method="displaySelectCompany">
+			<result>modalselectcompany.jsp</result>
+		</action>
+
+		<action name="showcreatecustomer" class="com.salesmanager.central.customer.CustomerDetailsAction" method="displayCustomerCreate">
+			<result>customerdetails.jsp</result>
+		</action>
+
+		<action name="editcustomer" class="com.salesmanager.central.customer.CustomerDetailsAction" method="createCustomer">
+			<result name="error">customerdetails.jsp</result>
+			<result name="success" type="redirectAction">
+            	<param name="actionName">customerdetails</param>
+            	<param name="customer.customerId">${customer.customerId}</param>
+       		</result>
+		</action>
+
+
+		<action name="resetcustomerpassword" class="com.salesmanager.central.customer.CustomerDetailsAction" method="resetPassword">
+			<result name="error">customerdetails.jsp</result>
+			<result name="success" type="redirectAction">
+            	<param name="actionName">customerdetails</param>
+            	<param name="customer.customerId">${customer.customerId}</param>
+       		</result>
+		</action>
+
+
+
+
+	</package>
+
+</struts>

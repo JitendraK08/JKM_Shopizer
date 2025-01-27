@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dynamicLinksRules xmlns="http://www.castsoftware.com/DlmRulesModel.xsd" >
+<!--
+ <rule name="rule0" action="ignore" >
+    <callerType names="JV_METHOD"/>
+    <calleeType names="SPRING_BEAN"/>
+    <leftStringFromCode regexp="getConfiguration\(\&quot;"/>    
+</rule>
+ <rule name="rule1" action="ignore" >
+    <callerType names="JV_METHOD"/>
+    <calleeType names="SPRING_BEAN"/>
+    <leftStringFromCode regexp="if \(locale.getVariant\(\).equals\(\&quot;"/>    
+</rule>
+ <rule name="rule2" action="ignore" >
+    <callerType names="JV_FIELD"/>
+    <calleeType names="CAST_Oracle_RelationalTable"/>
+    <leftStringFromCode regexp="public final static String ORDERSTABLE = \&quot;"/>    
+</rule>
+ <rule name="rule3" action="ignore" >
+    <callerType names="JV_FIELD"/>
+    <calleeType names="CAST_Oracle_RelationalTable"/>
+    <leftStringFromCode regexp="public final static String ORDERSTOTALTABLE = \&quot;"/>    
+</rule>
+
+ <rule name="rule4" action="ignore" >
+    <callerType names="JV_FIELD"/>
+    <calleeType names="SPRING_BEAN"/>
+    <leftStringFromCode regexp="private final static String moduleid = \&quot;"/>    
+</rule>
+ <rule name="rule5" action="ignore" >
+    <callerType names="JV_FIELD"/>
+    <calleeType names="SPRING_BEAN"/>
+    <leftStringFromCode regexp="private final static String moduleid = \&quot;"/>    
+</rule>
+
+ <rule name="rule6" action="ignore" >
+    <callerType names="JV_METHOD"/>
+    <calleeType names="SPRING_BEAN"/>
+    <leftStringFromCode regexp="private final static String moduleid = \&quot;"/>    
+</rule>
+ <rule name="rule7" action="ignore" >
+    <callerType names="JV_FIELD"/>
+    <calleeType names="SPRING_BEAN"/>
+    <leftStringFromCode regexp="private final static String moduleid = \&quot;"/>    
+</rule>
+<rule name="rule8" action="validate" >
+    <calleeType names="JSP_PROPERTY_MAPPING"/>
+    <leftStringFromCode regexp="bundle.getString"/>
+</rule>
+<rule name="rule9" action="ignore" >
+    <calleeType names="JSP_PROPERTY_MAPPING"/>
+    <leftStringFromCode regexp="PasswordCallback\("/>
+</rule>
+<rule name="rule10" action="validate" >
+    
+       <calleeType names="JSP_PROPERTY_MAPPING"/>
+    <leftStringFromCode regexp="getProperty\("/>
+</rule>
+-->
+<rule name="rule11" action="validate" >
+    <calleeType names="JSP_PROPERTY_MAPPING"/>
+    <leftStringFromCode regexp="getText\(\&quot;"/>
+</rule>
+<!--
+ <rule name="rule63" action="ignore" >
+    <callerType names="JV_METHOD|JV_FIELD"/>
+    <calleeType names="CAST_Oracle_PrivateSynonym|CAST_Oracle_RelationalTable|CAST_Oracle_Function|CAST_Oracle_Procedure|CAST_Oracle_MaterializedView|CAST_Oracle_PackageHeader|CAST_Oracle_View"/>
+    <leftStringFromCode regexp="strMsg .*|\, Version"/>    
+</rule>
+
+<rule name="rule64" action="ignore" >
+    <callerType names="JV_METHOD|JV_FIELD"/>
+    <calleeType names="CAST_Oracle_PrivateSynonym"/>
+    <leftStringFromCode regexp="as .*"/>    
+    <rightStringFromCode regexp=".*\,"/>    
+</rule>
+<rule name="rule65" action="ignore" >
+    <callerType names="JV_METHOD"/>
+    <calleeType names="CAST_Oracle_PrivateSynonym|CAST_Oracle_RelationalTable|CAST_Oracle_Function|CAST_Oracle_Procedure|CAST_Oracle_MaterializedView|CAST_Oracle_PackageHeader|CAST_Oracle_View"/>
+    <leftStringFromCode regexp="logger.*|throw new.*"/>    
+</rule> -->
+<!--
+<rule name="rule0" action="validate" >
+    <callerType names="CAST_DotNet_MethodCSharp"/>
+    <calleeType names="CAST_MSTSQL_Procedure"/>
+    <leftStringFromCode regexp="new SqlCommand\(\&quot;MB"/>    
+</rule>
+<rule name="rule1" action="validate" >
+    <callerType names="CAST_DotNet_MethodCSharp"/>
+    <calleeType names="CAST_MSTSQL_Procedure"/>
+    <leftStringFromCode regexp="CommandText = \&quot;\[MB\]\."/>    
+</rule>
+<rule name="rule2" action="validate" >
+    <callerType names="CAST_DotNet_MethodCSharp"/>
+    <calleeType names="CAST_MSTSQL_Procedure"/>
+    <leftStringFromCode regexp="CommandText = \&quot;mb"/>    
+</rule>
+<rule name="rule3" action="validate" >
+    <callerType names="CAST_DotNet_MethodCSharp"/>
+    <calleeType names="CAST_MSTSQL_Procedure"/>
+    <leftStringFromCode regexp="CommandText = \&quot;mb"/>    
+</rule>
+<rule name="rule4" action="validate" >
+    <callerType names="CAST_DotNet_MethodCSharp"/>
+    <calleeType names="CAST_MSTSQL_Procedure"/>
+    <leftStringFromCode regexp=".CommandText = \&quot;MB_"/>    
+</rule>
+<rule name="rule5" action="ignore" >
+    <callerType names="CAST_DotNet_MethodCSharp"/>
+    <calleeType names="CAST_MSTSQL_RelationalTable"/>
+    <leftStringFromCode regexp="ds.Tables.Contains\(\&quot;"/>    
+</rule>
+<rule name="rule6" action="ignore" >
+    <callerType names="CAST_DotNet_MethodCSharp"/>
+    <calleeType names="CAST_MSTSQL_RelationalTable"/>
+    <leftStringFromCode regexp=".Tables.Contains[&quot;"/>    
+</rule>
+<rule name="rule7" action="validate" >
+    <callerType names="CAST_DotNet_MethodCSharp"/>
+    <calleeType names="CAST_MSTSQL_Procedure"/>
+    <leftStringFromCode regexp="CommandText = \&quot;"/>    
+</rule>
+<rule name="rule8" action="ignore" >
+    <callerType names="CAST_DotNet_MethodCSharp"/>
+    <calleeType names="CAST_MSTSQL_RelationalTable"/>
+    <leftStringFromCode regexp="ds.Tables\[\&quot;"/>    
+</rule>
+<rule name="rule9" action="ignore" >
+    <callerType names="CAST_DotNet_MethodCSharp"/>
+    <calleeType names="CAST_MSTSQL_RelationalTable"/>
+    <leftStringFromCode regexp=".Tables\[\&quot;"/>    
+</rule>
+<rule name="rule10" action="ignore" >
+    <callerType names="CAST_DotNet_MethodCSharp"/>
+    <calleeType names="CAST_MSTSQL_RelationalTable"/>
+    <leftStringFromCode regexp="new DataTable\(\&quot;"/>    
+</rule>
+<rule name="rule11" action="ignore" >
+    <callerType names="CAST_DotNet_MethodCSharp"/>
+    <calleeType names="CAST_MSTSQL_RelationalTable"/>
+    <leftStringFromCode regexp=".MappingName = \&quot;"/>    
+</rule>
+<rule name="rule12" action="ignore" >
+    <callerType names="CAST_DotNet_MethodCSharp"/>
+    <calleeType names="CAST_MSTSQL_RelationalTable"/>
+    <leftStringFromCode regexp="this.TableName = \&quot;"/>    
+</rule>
+<rule name="rule13" action="ignore" >
+    <callerType names="CAST_DotNet_MethodCSharp"/>
+    <calleeType names="CAST_MSTSQL_RelationalTable"/>
+    <leftStringFromCode regexp=".Tables.Contains\(\&quot;"/>    
+</rule>
+
+<rule name="rule14" action="ignore" >
+    <callerType names="CAST_AST_CS_Constructor"/>
+    <calleeType names="CAST_MSTSQL_RelationalTable"/>
+    <leftStringFromCode regexp=".Tables[&quot;"/>    
+</rule>
+<rule name="rule15" action="ignore" >
+    <callerType names="CAST_AST_CS_Constructor"/>
+    <calleeType names="CAST_MSTSQL_RelationalTable"/>
+    <leftStringFromCode regexp="this.TableName = &quot;"/>    
+</rule>
+
+<rule name="rule16" action="ignore" >
+    <callerType names="CAST_DotNet_PropertySetterCSharp"/>
+    <calleeType names="CAST_MSTSQL_RelationalTable"/>
+    <leftStringFromCode regexp="value.Tables[\&quot;"/>    
+</rule>-->
+</dynamicLinksRules>

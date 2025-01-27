@@ -1,0 +1,26 @@
+CREATE OR REPLACE TRIGGER CENTRAL_MEASURE_UNITS_CENTRA_1 BEFORE INSERT OR UPDATE ON CENTRAL_MEASURE_UNITS
+FOR EACH ROW
+DECLARE 
+v_newVal NUMBER(12) := 0
+v_incval NUMBER(12) := 0
+BEGIN
+  IF INSERTING AND :new.CENTRAL_MEASURE_UNITS_ID IS NULL THEN
+    SELECT  CENTRAL_MEASURE_UNITS_CENTRAL_.NEXTVAL INTO v_newVal FROM DUAL
+    -- If this is the first time this table have been inserted into (sequence == 1)
+    IF v_newVal = 1 THEN 
+      --get the max indentity value from the table
+      SELECT NVL(max(CENTRAL_MEASURE_UNITS_ID),0) INTO v_newVal FROM CENTRAL_MEASURE_UNITS
+      v_newVal := v_newVal + 1
+      --set the sequence to that value
+      LOOP
+           EXIT WHEN v_incval>=v_newVal
+           SELECT CENTRAL_MEASURE_UNITS_CENTRAL_.nextval INTO v_incval FROM dual
+      END LOOP
+    END IF
+    --used to emulate LAST_INSERT_ID()
+    --mysql_utilities.identity := v_newVal; 
+   -- assign the value from the sequence to emulate the identity column
+   :new.CENTRAL_MEASURE_UNITS_ID := v_newVal
+  END IF
+END
+

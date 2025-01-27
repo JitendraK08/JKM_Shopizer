@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+
+
+    <package name="tax" extends="struts-default" namespace="/tax">
+
+	        <!-- Tax entry point -->
+
+	        <action name="tax" class="com.salesmanager.central.tax.DisplayTaxAction" method="displayTax">
+				<result name="showoptions">taxoptions.jsp</result>
+				<result name="success">edittax.jsp</result>
+			</action>
+
+
+
+			<!-- Invoked when the user is in custom setup configuration and bring changes -->
+			<action name="configuresetuptax" class="com.salesmanager.central.tax.DisplayTaxAction" method="configureSetupTax">
+				<result name="success">edittax.jsp</result>
+			</action>
+
+		    <action name="configuretax" class="com.salesmanager.central.tax.DisplayTaxAction" method="configureTax">
+				<result name="success" type="redirectAction">tax</result>
+				<result name="error">taxoptions.jsp</result>
+			</action>
+
+
+
+
+
+			<!-- Tax Class -->
+			<action name="displaytaxclass" class="com.salesmanager.central.tax.DisplayTaxAction" method="displayTaxClass">
+				<result name="success">taxclass.jsp</result>
+			</action>
+
+			<action name="edittaxclass" class="com.salesmanager.central.tax.EditTaxAction" method="editTaxClass">
+				<result name="success">taxclass.jsp</result>
+			</action>
+
+
+
+		    <!--  Tax Basis -->
+		    <action name="displaytaxbasis" class="com.salesmanager.central.tax.DisplayTaxAction" method="displayTaxBasis">
+				<result name="success">taxbasis.jsp</result>
+			</action>
+		    <action name="edittaxbasis" class="com.salesmanager.central.tax.EditTaxAction" method="editTaxBasis">
+				<result name="success">taxbasis.jsp</result>
+			</action>
+
+
+			<!-- Tax Rates -->
+		    <action name="showtax" class="com.salesmanager.central.tax.DisplayTaxAction" method="displayTax">
+				<result name="showoptions">taxoptions.jsp</result>
+				<result name="success">edittax.jsp</result>
+			</action>
+
+			<action name="addtaxline" class="com.salesmanager.central.tax.EditTaxAction" method="addTaxRate">
+				<result name="input">edittax.jsp</result>
+				<result name="success">edittax.jsp</result>
+			</action>
+
+
+			<action name="removetax" class="com.salesmanager.central.tax.DisplayTaxAction" method="removeTax">
+				<result name="success" type="redirectAction">tax</result>
+			</action>
+
+			<action name="modifytaxline" class="com.salesmanager.central.tax.EditTaxAction" method="editTaxRate">
+				<result name="success">edittax.jsp</result>
+				<result name="input">edittax.jsp</result>
+			</action>
+
+
+		</package>
+
+
+
+
+</struts>

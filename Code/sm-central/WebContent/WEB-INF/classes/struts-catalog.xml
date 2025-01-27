@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+
+
+
+    <package name="catalog" extends="struts-default" namespace="/catalog">
+
+		<default-action-ref name="productlist" />
+
+		<global-results>
+			<result name="GENERICERROR">/error.jsp</result>
+		  	 <result name="AUTHORIZATIONEXCEPTION" type="redirect">
+             	<param name="actionName">productlist</param>
+             	<param name="namespace">/catalog</param>
+         	</result>
+		</global-results>
+		
+		
+
+
+		<!-- Product relationship -->
+	    <!-- {1}=associationType,  {2}=method-->
+	    <!-- eg crosssell_display.action -->
+	    <action name="*_*" method="{2}" class="com.salesmanager.central.catalog.RelationShip{1}Action">
+				<result name="success">{1}.jsp</result>
+				<result name="input">{1}.jsp</result>
+				<result name="deletecomplete" type="redirectAction">{1}_{2}</result>
+		</action>
+		
+		
+        <!-- Category entry point -->
+        <action name="category" class="com.salesmanager.central.catalog.EditCategoryAction" method="display">
+			<result>category.jsp</result>
+		</action>
+
+    	 <action name="uploadCategory" class="com.salesmanager.central.util.upload.GenericFileUploadAction" method ="uploadCategories">
+			<result name="error" type="redirectAction">
+            	<param name="actionName">category</param>
+       		</result> 
+			<result name="success" type="redirectAction">
+            	<param name="actionName">category</param>
+       		</result>
+			<result name="input" type="redirectAction">
+            	<param name="actionName">category</param>
+       		</result>       		        		   	 
+        </action>
+
+		<!-- Category edition -->
+
+		<action name="showeditcategory" class="com.salesmanager.central.catalog.EditCategoryAction" method="showEditCategory">
+			<result>editcategory.jsp</result>
+		</action>
+
+	    <action name="savecategory" class="com.salesmanager.central.catalog.EditCategoryAction" method="saveCategory">
+			<result>editcategory.jsp</result>
+			<result name="input">editcategory.jsp</result>
+		</action>
+
+	    <action name="deletecategory" class="com.salesmanager.central.catalog.EditCategoryAction" method="deleteCategory">
+			<result name="error" type="redirectAction">
+            	<param name="actionName">showeditcategory</param>
+				<param name="categoryid">${category.categoryId}</param>
+       		</result>
+			<result name="success" type="redirectAction">category</result>
+		</action>
+
+	    <action name="showmovecategory" class="com.salesmanager.central.catalog.EditCategoryAction" method="showEditCategory">
+			<result name="success">editparentcategory.jsp</result>
+		</action>
+
+	    <action name="savemovecategory" class="com.salesmanager.central.catalog.EditCategoryAction" method="saveCategory">
+			<result name="success" type="redirectAction">category</result>
+			<result name="UNAUTHORIZED" type="redirectAction">category</result>
+		</action>
+
+
+		<!-- Product edition -->
+
+	    <action name="showcreateproduct" class="com.salesmanager.central.catalog.EditProductAction" method="showProductEditMode">
+			<result>editproduct.jsp</result>
+			<result name="input">editproduct.jsp</result>
+		</action>
+
+		<action name="saveproduct" class="com.salesmanager.central.catalog.EditProductAction" method="saveProduct">
+			<result name="success" type="redirectAction">
+            	<param name="actionName">showcreateproduct</param>
+            	<param name="product.productId">${newProductId}</param>
+            	<param name="cropImageUrl">${cropImageUrl}</param>
+       		</result>
+			<result name="input">editproduct.jsp</result>
+		</action>
+
+	    <action name="delete_file" class="com.salesmanager.central.catalog.EditProductAction" method="deleteFile">
+				<result name="success">editproduct.jsp</result>
+				<result name="unauthorized" type="redirectAction">productlist</result>
+		</action>
+
+		<action name="deleteproduct" class="com.salesmanager.central.catalog.EditProductAction" method="deleteProduct">
+			<result name="success" type="redirectAction">productlist</result>
+		</action>
+
+		<action name="cloneproduct" class="com.salesmanager.central.catalog.EditProductAction" method="cloneProduct">
+			<result name="success">editproduct.jsp</result>
+		</action>
+		
+		<action name="showCropProductImage" class="com.salesmanager.central.catalog.EditProductAction" method="showCropProductImage">
+			<result name="success">cropproduct.jsp</result>
+			<result name="productList" type="redirectAction">productlist</result>
+		</action>
+		
+		<action name="cropProductImage" class="com.salesmanager.central.catalog.EditProductAction" method="cropProductImage">
+			<result name="success" type="redirectAction">
+            	<param name="actionName">showcreateproduct</param>
+            	<param name="product.productId">${product.productId}</param>
+       		</result>
+       		<result name="productList" type="redirectAction">productlist</result>
+       		<result name="input">editproduct.jsp</result>
+		</action>		
+
+		<!-- Discount -->
+
+		<action name="editdiscount" class="com.salesmanager.central.catalog.EditDiscountAction" method="showDiscount">
+				<result name="success">discounts.jsp</result>
+				<result name="unauthorized" type="redirectAction">productlist</result>
+		</action>
+
+		<action name="savediscount" class="com.salesmanager.central.catalog.EditDiscountAction" method="saveDiscount">
+				<result name="success">discounts.jsp</result>
+				<result name="unauthorized" type="redirectAction">productlist</result>
+		</action>
+
+		<action name="deletediscount" class="com.salesmanager.central.catalog.EditDiscountAction" method="deleteDiscount">
+				<result name="success">discounts.jsp</result>
+				<result name="unauthorized" type="redirectAction">productlist</result>
+		</action>
+
+
+		<!-- Product Price -->
+
+		<action name="showproductprice" class="com.salesmanager.central.catalog.EditProductPriceAction" method="displayProductPrice">
+			<result>productprices.jsp</result>
+			<result name="error" type="redirectAction">
+            	<param name="actionName">productlist</param>
+       		</result>
+		</action>
+
+
+		<action name="addproductprice" class="com.salesmanager.central.catalog.EditProductPriceAction" method="editProductPrice">
+			<result name="error" type="redirectAction">
+            	<param name="actionName">showproductprice</param>
+            	<param name="product.productId">${product.productId}</param>
+       		</result>
+       	    <result name="success" type="redirectAction">
+            	<param name="actionName">showproductprice</param>
+            	<param name="product.productId">${product.productId}</param>
+       		</result>
+			<result name="input">productprices.jsp</result>
+		</action>
+
+		<action name="editproductprice" class="com.salesmanager.central.catalog.EditProductPriceAction" method="editProductPrice">
+			<result name="error" type="redirectAction">
+            	<param name="actionName">showproductprice</param>
+            	<param name="product.productId">${product.productId}</param>
+       		</result>
+       	    <result name="success" type="redirectAction">
+            	<param name="actionName">showproductprice</param>
+            	<param name="product.productId">${product.productId}</param>
+       		</result>
+			<result name="input">productprices.jsp</result>
+			<result name="validation">productprices.jsp</result>
+		</action>
+
+		<action name="showproductpricediscount" class="com.salesmanager.central.catalog.EditProductPriceDiscountAction" method="displayProductPriceDiscount">
+			<result>pricediscounts.jsp</result>
+			<result name="error" type="redirectAction">
+            	<param name="actionName">showproductprice</param>
+            	<param name="product.productId">${product.productId}</param>
+       		</result>
+		</action>
+
+		<action name="editproductpricediscount" class="com.salesmanager.central.catalog.EditProductPriceDiscountAction" method="editProductPriceDiscount">
+			<result name="success" type="redirectAction">
+            	<param name="actionName">showproductpricediscount</param>
+            	<param name="price.productPriceId">${price.productPriceId}</param>
+            	<param name="product.productId">${product.productId}</param>
+       		</result>
+       		<result name = "error">pricediscounts.jsp</result>
+       		<result name="input">pricediscounts.jsp</result>
+		</action>
+
+		<action name="deletepricediscount" class="com.salesmanager.central.catalog.EditProductPriceDiscountAction" method="deleteProductPriceDiscount">
+			<result name="success" type="redirectAction">
+            	<param name="actionName">showproductpricediscount</param>
+            	<param name="price.productPriceId">${price.productPriceId}</param>
+            	<param name="product.productId">${product.productId}</param>
+       		</result>
+       		<result name = "error">pricediscounts.jsp</result>
+       		<result name="input">pricediscounts.jsp</result>
+		</action>
+
+
+
+		<!-- Upload product -->
+
+		 <action name="showuploadform" class="com.salesmanager.central.catalog.EditProductUploadAction" method="showUploadForm">
+				<result name="success">fileview.jsp</result>
+				<result name="unauthorized" type="redirectAction">productlist</result>
+		 </action>
+
+		 <action name="uploadproduct" class="com.salesmanager.central.catalog.EditProductUploadAction" method="uploadProduct">
+				<result name="success">fileview.jsp</result>
+				<result name="input">fileview.jsp</result>
+				<result name="unauthorized" type="redirectAction">productlist</result>
+				<interceptor-ref name="fileUpload">
+        			<param name="maximumSize">1048576</param><!-- approximatly 10 mb -->
+     			</interceptor-ref>
+     			<interceptor-ref name="defaultStack"/>
+     				
+		 </action>
+
+		<!-- Product list -->
+
+		<action name="productlist" class="com.salesmanager.central.catalog.ProductListAction" method="show">
+			<result>productlist.jsp</result>
+		</action>
+		
+		 <action name="uploadProducts" class="com.salesmanager.central.util.upload.GenericFileUploadAction" method ="uploadProducts">
+			<result name="error" type="redirectAction">
+            	<param name="actionName">productlist</param>
+       		</result> 
+			<result name="success" type="redirectAction">
+            	<param name="actionName">productlist</param>
+       		</result>
+			<result name="input" type="redirectAction">
+            	<param name="actionName">productlist</param>
+       		</result>            
+        </action>
+
+		<action name="updatelist" class="com.salesmanager.central.catalog.ProductListAction" method="updateavailability">
+			<result name="success" type="redirectAction">productlist</result>
+		</action>
+
+		<!-- Product Options -->
+
+		<action name="productoption" class="com.salesmanager.central.catalog.EditProductOptionsAction" method="displayProductOptions">
+			<result name="success">productoptions.jsp</result>
+		</action>
+
+		<action name="editproductoptions" class="com.salesmanager.central.catalog.EditProductOptionsAction" method="editProductOptions">
+			<result name="success" type="redirectAction">productoption</result>
+			<result name="input">productoptions.jsp</result>
+		</action>
+
+		<action name="addproductoption" class="com.salesmanager.central.catalog.EditProductOptionsAction" method="addProductOption">
+			<result name="success" type="redirectAction">productoption</result>
+			<result name="input">productoptions.jsp</result>
+		</action>
+
+		<!-- Product Options Values-->
+
+		<action name="productoptionvalues" class="com.salesmanager.central.catalog.EditProductOptionsValuesAction" method="displayProductOptionsValues">
+			<result name="success">productoptionsvalues.jsp</result>
+		</action>
+
+		<action name="editproductoptionsvalues" class="com.salesmanager.central.catalog.EditProductOptionsValuesAction" method="editProductOptionsValues">
+			<result name="success" type="redirectAction">productoptionvalues</result>
+			<result name="associate-success" type="redirectAction">
+            	<param name="actionName">productoptionvalues</param>
+            	<param name="productOption.productOptionId">${productOption.productOptionId}</param>
+       		</result>
+			<result name="input">productoptionsvalues.jsp</result>
+		</action>
+		
+		
+		<action name="editproductoptionvaluetext" class="com.salesmanager.central.catalog.EditProductAttributesAction" method="editProductOptionTextValues">
+			<result name="success">producttextoptionvalues.jsp</result>			
+			<result name="error" type="redirectAction">
+				<param name="actionName">productattributes</param>
+            	<param name="product.productId">${product.productId}</param>
+			</result>
+			<result name="input">producttextoptionvalues.jsp</result>
+		</action>
+		
+		<action name="saveproductoptionvaluetext" class="com.salesmanager.central.catalog.EditProductAttributesAction" method="saveProductOptionTextValues">
+			<result name="success">producttextoptionvalues.jsp</result>			
+			<result name="error">producttextoptionvalues.jsp</result>
+			<result name="input">producttextoptionvalues.jsp</result>
+		</action>
+
+		<action name="addproductoptionvalue" class="com.salesmanager.central.catalog.EditProductOptionsValuesAction" method="addProductOptionValue">
+			<result name="success" type="redirectAction">productoptionvalues</result>
+			<result name="associate-success" type="redirectAction">
+            	<param name="actionName">productoptionvalues</param>
+            	<param name="productOption.productOptionId">${productOption.productOptionId}</param>
+       		</result>
+			<result name="input">productoptionsvalues.jsp</result>
+		</action>
+
+		<action name="addproductoptionvalueid" class="com.salesmanager.central.catalog.EditProductOptionsValuesAction" method="associateProductOptionValue">
+			<result name="success" type="redirectAction">productoptionvalues</result>
+			<result name="associate-success" type="redirectAction">
+            	<param name="actionName">productoptionvalues</param>
+            	<param name="productOption.productOptionId">${productOption.productOptionId}</param>
+       		</result>
+			<result name="input">productoptionsvalues.jsp</result>
+		</action>
+
+		<!-- Product attributes -->
+
+		<action name="productattributes" class="com.salesmanager.central.catalog.EditProductAttributesAction" method="displayProductAttributes">
+			<result name="success">productattributes.jsp</result>
+			<result name="input">productattributes.jsp</result>
+		</action>
+
+		<action name="addproductoptiontoattribute" class="com.salesmanager.central.catalog.EditProductAttributesAction" method="addProductAttributes">
+			<result name="success" type="redirectAction">
+            	<param name="actionName">productattributes</param>
+            	<param name="product.productId">${product.productId}</param>
+       		</result>
+			<result name="input">productattributes.jsp</result>
+		</action>
+
+		<action name="editproductattributes" class="com.salesmanager.central.catalog.EditProductAttributesAction" method="editProductAttributes">
+			<result name="success" type="redirectAction">
+            	<param name="actionName">productattributes</param>
+            	<param name="product.productId">${product.productId}</param>
+       		</result>
+			<result name="input">productattributes.jsp</result>
+		</action>
+
+
+
+		<action name="choosecategory" class="com.salesmanager.central.catalog.EditProductAction" method="setcategory">
+			<result>editproduct.jsp</result>
+		</action>
+
+
+		<action name="productpreview" class="com.salesmanager.central.catalog.ProductPreviewAction" method="display">
+				<result name="success">productpreview.jsp</result>
+				<result name="unauthorized" type="redirectAction">productlist</result>
+		</action>
+		
+		<action name="productreview" class="com.salesmanager.central.catalog.ProductReviewAction" method="reviewProduct">
+				<result name="success">productreview.jsp</result>
+				<result name="unauthorized" type="redirectAction">productlist</result>
+		</action>
+		
+		<action name="removeReview" class="com.salesmanager.central.catalog.ProductReviewAction" method="removeReview">
+				<result name="success">productreview.jsp</result>
+				<result name="unauthorized" type="redirectAction">productlist</result>
+		</action>
+
+
+
+
+
+
+
+
+
+    </package>
+
+
+
+
+</struts>

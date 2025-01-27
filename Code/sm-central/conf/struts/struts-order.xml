@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+
+
+    <package name="orders" extends="struts-default" namespace="/orders">
+		<default-action-ref name="orderlist" />
+		
+
+
+
+		<global-results>
+
+			<result name="GENERICERROR">/error.jsp</result>
+		  	 <result name="AUTHORIZATIONEXCEPTION" type="redirectAction">
+             	<param name="actionName">orderlist</param>
+             	<param name="namespace">/orders</param>
+         	</result>
+
+	   </global-results>
+
+		<!-- Order list -->
+
+        <action name="orderlist" class="com.salesmanager.central.orders.OrderListAction" method="displayOrderList">
+			<result>orderlist.jsp</result>
+			<result name="ERROR">orderlist.jsp</result>
+		</action>
+
+		<action name="orderlistpage" class="com.salesmanager.central.orders.OrderListAction" method="displayOrderListPage">
+			<result>orderlist.jsp</result>
+			<result name="ERROR">orderlist.jsp</result>
+		</action>
+		
+		<action name="orderReport" class="com.salesmanager.central.orders.OrderListAction" method="createReportByCriteria">
+				<result name="input" type="redirectAction">
+				    <param name="actionName">orderlist</param>
+				</result>
+				<result name="success" type="stream">
+					 <param name="contentType">application/pdf</param>
+					 <param name="inputName">inputStream</param>
+					 <param name="contentDisposition">attachment;filename="orders.pdf"</param>
+					 <param name="bufferSize">1024</param>
+				</result>
+		</action>
+		
+		
+		<!-- Order details -->
+
+		<action name="orderdetails" class="com.salesmanager.central.orders.EditOrderDetailsAction" method="showOrderDetails">
+			<result>orderdetails.jsp</result>
+		</action>
+
+
+		<action name="invoice" class="com.salesmanager.central.orders.EditOrderDetailsAction" method="generateInvoice">
+			<result name="success" type="redirectAction">
+            	<param name="actionName">orderdetails</param>
+            	<param name="order.orderId">${order.orderId}</param>
+       		</result>
+		</action>
+
+		<action name="invoiceReport" class="com.salesmanager.central.orders.EditOrderDetailsAction" method="generateInvoiceReport">
+				<result name="input" type="redirectAction">
+				    <param name="actionName">orderdetails</param>
+            		<param name="order.orderId">${order.orderId}</param>
+				</result>
+				<result name="success" type="stream">
+					 <param name="contentType">application/pdf</param>
+					 <param name="inputName">inputStream</param>
+					 <param name="contentDisposition">attachment;filename="invoice.pdf"</param>
+					 <param name="bufferSize">1024</param>
+				</result>
+		</action>
+
+		<action name="resetdownloadcounters" class="com.salesmanager.central.orders.EditOrderDetailsAction" method="generateDownload">
+			<result name="success" type="redirectAction">
+            	<param name="actionName">orderdetails</param>
+            	<param name="order.orderId">${order.orderId}</param>
+       		</result>
+		</action>
+
+
+	    <action name="packing" class="com.salesmanager.central.orders.EditOrderDetailsAction" method="generatePacking">
+			<result>packing.jsp</result>
+		</action>
+
+		<action name="updatestatus" class="com.salesmanager.central.orders.EditOrderDetailsAction" method="updateStatus">
+			<result name="success" type="redirectAction">
+            	<param name="actionName">orderdetails</param>
+            	<param name="order.orderId">${order.orderId}</param>
+       		</result>
+		</action>
+
+		<action name="searchcriteria" class="com.salesmanager.central.orders.OrderListAction" method="searchByCriteria">
+			<result>orderlist.jsp</result>
+			<result name="ERROR" type="redirectAction">orderlist</result>
+		</action>
+
+		<action name="editcustomershipping" class="com.salesmanager.central.orders.EditCustomerAction" method="viewShippingCustomer">
+			<result>editcustomershipping.jsp</result>
+			<result name="ERROR" type="redirectAction">orderdetails</result>
+		</action>
+
+		<action name="editcustomerbilling" class="com.salesmanager.central.orders.EditCustomerAction" method="viewBillingCustomer">
+			<result>editcustomerbilling.jsp</result>
+			<result name="ERROR" type="redirectAction">orderdetails</result>
+		</action>
+
+		<action name="editshipping" class="com.salesmanager.central.orders.EditCustomerAction" method="editShipping">
+			<result name="success" type="redirectAction">
+            	<param name="actionName">editcustomershipping</param>
+            	<param name="order.orderId">${order.orderId}</param>
+       		</result>
+			<result name="ERROR" type="redirectAction">orderdetails</result>
+		</action>
+
+		<action name="validateaddress" class="com.salesmanager.central.orders.AddressValidationAction" method="getAddressMatch">
+			<result>editcustomershipping.jsp</result>
+			<result name="error" type="redirectAction">
+            	<param name="actionName">editcustomershipping</param>
+            	<param name="order.orderId">${order.orderId}</param>
+       		</result>
+		</action>
+
+		<action name="editbilling" class="com.salesmanager.central.orders.EditCustomerAction" method="editBilling">
+			<result name="success" type="redirectAction">
+            	<param name="actionName">editcustomerbilling</param>
+            	<param name="order.orderId">${order.orderId}</param>
+       		</result>
+			<result name="ERROR" type="redirectAction">orderdetails</result>
+		</action>
+
+		<action name="displaymailaddress" class="com.salesmanager.central.orders.EditCustomerAction" method="displayOrderEmailAddress">
+			<result>editorderemailaddress.jsp</result>
+			<result name="ERROR" type="redirectAction">orderdetails</result>
+		</action>
+
+		<action name="editemailaddress" class="com.salesmanager.central.orders.EditCustomerAction" method="editOrderEmailAddress">
+			<result name="success">editorderemailaddress.jsp</result>
+       		<result name="input">editorderemailaddress.jsp</result>
+			<result name="ERROR" type="redirectAction">orderdetails</result>
+		</action>
+
+		<action name="transactiondetails" class="com.salesmanager.central.orders.TransactionDetailsAction" method="displayTransactions">
+			<result>transactiondetails.jsp</result>
+			<result name="ERROR" type="redirectAction">orderdetails</result>
+		</action>
+
+		<action name="transactionprocess" class="com.salesmanager.central.orders.TransactionDetailsAction" method="processTransaction">
+			<result name="success" type="redirectAction">
+            	<param name="actionName">transactiondetails</param>
+            	<param name="order.orderId">${order.orderId}</param>
+       		</result>
+       		<result name="input">transactiondetails.jsp</result>
+			<result name="ERROR" type="redirectAction">orderdetails</result>
+		</action>
+
+
+
+
+
+
+	</package>
+
+</struts>

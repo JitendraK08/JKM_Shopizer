@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+
+
+    <package name="payment" extends="struts-default" namespace="/payment">
+
+
+    	    
+    	    
+    	    <interceptors>
+				<interceptor name="smPayment" class="com.salesmanager.central.payment.PaymentModuleActionInterceptor"/>
+				<interceptor-stack name="smPaymentStack">
+					<interceptor-ref name="defaultStack" />
+					<interceptor-ref name="smPayment" />
+				</interceptor-stack>
+			</interceptors>
+
+  			<default-action-ref name="payment" />
+    	  
+
+    	    <!-- For payment modules -->
+	        <!-- moduleid_method.action -->
+	        <!-- {1}=moduleid,  {2}=method-->
+	        <!-- eg psigate_display.action -->
+	        <action name="*_*" method="{2}" class="com.salesmanager.central.payment.Payment{1}Action">
+				<result name="success">{1}.jsp</result>
+				<result name="input">{1}.jsp</result>
+				<result name="deletecomplete" type="redirectAction">payment</result>
+				<interceptor-ref name="smPaymentStack" />
+			</action>
+
+        <action name="payment" class="com.salesmanager.central.payment.PaymentMethodListAction" method="displayPaymentModules">
+			<result>paymentmethods.jsp</result>
+		</action>
+
+
+
+
+    </package>
+
+
+</struts>

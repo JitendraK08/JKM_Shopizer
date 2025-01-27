@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+
+		<package name="shipping" extends="struts-default" namespace="/shipping">
+
+
+
+	        <interceptors>
+				<interceptor name="smShipping" class="com.salesmanager.central.shipping.ShippingModuleActionInterceptor"/>
+				<interceptor-stack name="smShippingStack">
+					<interceptor-ref name="defaultStack" />
+					<interceptor-ref name="smShipping" />
+				</interceptor-stack>
+			</interceptors>
+
+
+
+
+
+	        <!-- For shipping modules -->
+	        <!-- moduleid_method.action -->
+	        <!-- {1}=moduleid,  {2}=method-->
+	        <!-- eg upsxml_display.action -->
+	        <action name="*_*" method="{2}" class="com.salesmanager.central.shipping.Shipping{1}Action">
+				<result name="success">{1}.jsp</result>
+				<result name="input">{1}.jsp</result>
+				<result name="deletecomplete" type="redirectAction">shippingrates</result>
+				<interceptor-ref name="smShippingStack" />
+			</action>
+
+
+	        <!-- Shipping entry point -->
+	        <action name="shipping" class="com.salesmanager.central.shipping.ShippingZoneAction" method="displayZones">
+				<result name="success">shippingmain.jsp</result>
+			</action>
+
+		   <action name="selectshippingzones" class="com.salesmanager.central.shipping.ShippingZoneAction" method="saveZones">
+				<result name="success">shippingmain.jsp</result>
+				<result name="input">shippingmain.jsp</result>
+			</action>
+
+			<!-- Shipping quotes list page -->
+			<action name="shippingrates" class="com.salesmanager.central.shipping.ShippingRatesAction" method="displayShippingModules">
+				<result name="success">shippingmethods.jsp</result>
+				<result name="input">shippingmethods.jsp</result>
+				<result name="timeout">/common/timeout.jsp</result>
+			</action>
+
+
+			<!-- Real time shipping methods details -->
+	        <action name="savemethoddetails" class="com.salesmanager.central.shipping.ShippingRatesAction" method="saveMethodDetails">
+				<result name="success" type="redirectAction">shippingrates</result>
+				<result name="input">shippingmethods.jsp</result>
+			</action>
+
+
+			<action name="packing" class="com.salesmanager.central.shipping.EditPackingAction" method="display">
+				<result name="success">packing.jsp</result>
+			</action>
+
+			<action name="editPacking" class="com.salesmanager.central.shipping.EditPackingAction" method="editPackingOption">
+				<result name="success" type="redirectAction">packing</result>
+				<result name="error">packing.jsp</result>
+			</action>
+
+
+			<action name="shippingconfig" class="com.salesmanager.central.shipping.ShippingOtherOptionsAction" method="display">
+				<result name="success">shippingotherconfiguration.jsp</result>
+				<result name="timeout">/common/timeout.jsp</result>
+			</action>
+
+			<action name="configureshipping" class="com.salesmanager.central.shipping.ShippingOtherOptionsAction" method="save">
+				<result name="input">shippingotherconfiguration.jsp</result>
+				<result name="success" type="redirectAction">shippingconfig</result>
+				<result name="timeout">/common/timeout.jsp</result>
+			</action>
+
+			<action name="ratetable" class="com.salesmanager.central.shipping.ShippingCustomRatesAction" method="display">
+				<result name="success">shippingcustomrates.jsp</result>
+				<result name="timeout">/common/timeout.jsp</result>
+			</action>
+
+			<action name="configurecustomshipping" class="com.salesmanager.central.shipping.ShippingOtherOptionsAction" method="save">
+				<result name="input">shippingcustomrates.jsp</result>
+				<result name="success">shippingcustomrates.jsp</result>
+				<result name="timeout">/common/timeout.jsp</result>
+			</action>
+
+			<action name="addcustomshippingzone" class="com.salesmanager.central.shipping.ShippingCustomRatesAction" method="add">
+				<result name="input">shippingcustomrates.jsp</result>
+				<result name="success" type="redirectAction">ratetable</result>
+				<result name="timeout">/common/timeout.jsp</result>
+			</action>
+
+			<action name="addmaxprice" class="com.salesmanager.central.shipping.ShippingCustomRatesAction" method="addMaxPrice">
+				<result name="input">shippingcustomrates.jsp</result>
+				<result name="success" type="redirectAction">ratetable</result>
+				<result name="error">shippingcustomrates.jsp</result>
+				<result name="timeout">/common/timeout.jsp</result>
+			</action>
+			<!-- remove one line -->
+			<action name="removecountry" class="com.salesmanager.central.shipping.ShippingCustomRatesAction" method="removeCountry">
+				<result name="input">shippingcustomrates.jsp</result>
+				<result name="success" type="redirectAction">ratetable</result>
+				<result name="timeout">/common/timeout.jsp</result>
+			</action>
+
+			<action name="modifypricezone" class="com.salesmanager.central.shipping.ShippingCustomRatesAction" method="modifyPriceZone">
+				<result name="input">shippingcustomrates.jsp</result>
+				<result name="success" type="redirectAction">ratetable</result>
+				<result name="timeout">/common/timeout.jsp</result>
+			</action>
+
+			<action name="enabletablerate" class="com.salesmanager.central.shipping.ShippingCustomRatesAction" method="editTableRate">
+				<result name="input">shippingcustomrates.jsp</result>
+				<result name="success" type="redirectAction">ratetable</result>
+				<result name="timeout">/common/timeout.jsp</result>
+			</action>
+
+			<action name="removeprice" class="com.salesmanager.central.shipping.ShippingCustomRatesAction" method="removePriceLine">
+				<result name="input">shippingcustomrates.jsp</result>
+				<result name="success" type="redirectAction">ratetable</result>
+				<result name="error">shippingcustomrates.jsp</result>
+				<result name="timeout">/common/timeout.jsp</result>
+			</action>
+
+			<action name="modifyprice" class="com.salesmanager.central.shipping.ShippingCustomRatesAction" method="modifyPriceLine">
+				<result name="input">shippingcustomrates.jsp</result>
+				<result name="success" type="redirectAction">ratetable</result>
+				<result name="error">shippingcustomrates.jsp</result>
+				<result name="timeout">/common/timeout.jsp</result>
+			</action>
+
+
+			<action name="removezoneprice" class="com.salesmanager.central.shipping.ShippingCustomRatesAction" method="removeZonePrice">
+				<result name="input">shippingcustomrates.jsp</result>
+				<result name="success" type="redirectAction">ratetable</result>
+				<result name="timeout">/common/timeout.jsp</result>
+			</action>
+
+
+    	</package>
+
+
+
+
+</struts>

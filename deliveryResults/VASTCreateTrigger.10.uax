@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<instances>
+ <instance id="VASTCreateTrigger.10" instanceOf="CAST_Oracle_DML_Trigger">
+  <CAST_AST_ANSISQL_TriggerReferencingClause referencingClause="REFERENCING NEW AS NEW OLD AS OLD"/>
+  <CAST_SQL_Object version="10.2.0.4.0" owner="SHOPIZER" objectId="52126"/>
+  <CAST_AST_ANSISQL_DMLTriggerEventClause onInsert="1" onDelete="0"/>
+  <CAST_AST_ANSISQL_TriggeredAction whenClauseSeachCondition="" forEachState="1"/>
+  <CAST_AST_ANSISQL_TriggerEventClause triggerAction="1"/>
+  <CAST_AST_ANSISQL_DMLTriggerUpdateClause onUpdate="1"/>
+  <CAST_Resolution_Identification resolutionName="GEO_ZONES_TAX_TEMPLATE_GEO_Z_1"/>
+  <CAST_Oracle_InvalidObject isInvalid="1"/>
+  <CAST_Symbol_WithParent parent="p_Schema.1"/>
+  <CAST_AST_ANSISQL_TriggerSource startBlock="1"/>
+  <POSITIONABLE POSITIONS="CAST_TargetSourceFile.339(1,1,26,-1)"/>
+  <CAST_CodeExpandable sourceFile="CAST_TargetSourceFile.339"/>
+ </instance>
+ <instance id="CAST_TargetSourceFile.339" instanceOf="CAST_TargetSourceFile">
+  <bookmark source="VASTCreateTrigger.10.src"/>
+  <shell fullPath="VASTCreateTrigger.10.src"/>
+ </instance>
+</instances>

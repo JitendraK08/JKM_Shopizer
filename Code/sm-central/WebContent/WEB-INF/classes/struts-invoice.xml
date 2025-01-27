@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+
+    <package name="invoice" extends="struts-default" namespace="/invoice">
+
+
+
+
+		<global-results>
+
+			<result name="GENERICERROR">/error.jsp</result>
+		  	 <result name="AUTHORIZATIONEXCEPTION" type="redirectAction">
+             	<param name="actionName">invoicelist</param>
+             	<param name="namespace">/invoice</param>
+         	</result>
+
+	   </global-results>
+
+
+	    <action name="invoicelist" class="com.salesmanager.central.invoice.InvoiceListAction" method="displayInvoiceList">
+			<result>invoicelist.jsp</result>
+		</action>
+
+	    <action name="invoicereset" class="com.salesmanager.central.invoice.InvoiceListAction" method="resetInvoiceList">
+			<result>invoicelist.jsp</result>
+		</action>
+
+
+	    <action name="showselectctproduct" class="com.salesmanager.central.invoice.InvoiceDetailsAction" method="selectProduct">
+			<result>modalselectproduct.jsp</result>
+		</action>
+
+
+	    <action name="showselectctattributes" class="com.salesmanager.central.catalog.EditProductAttributesAction" method="displayProductAttributes">
+			<result>modalselectattributes.jsp</result>
+		</action>
+
+	    <action name="showshippingmethods" class="com.salesmanager.central.shipping.EditShippingMethods" method="displayShippingMethods">
+			<result>modalselectshipping.jsp</result>
+		</action>
+
+
+		<action name="showcreateinvoiceinit" class="com.salesmanager.central.invoice.InvoiceDetailsAction" method="createInvoice">
+			<result name="success" type="redirectAction">
+            	<param name="actionName">showcreateinvoice</param>
+            	<param name="order.orderId">${order.orderId}</param>
+       		</result>
+			<result name="error" type="redirectAction">invoicelist</result>
+		</action>
+
+
+		<action name="showcreateinvoice" class="com.salesmanager.central.invoice.InvoiceDetailsAction" method="displayInvoiceCreate">
+			<result>invoicedetails.jsp</result>
+			<result name="error" type="redirectAction">invoicelist</result>
+		</action>
+
+		<action name="showeditinvoice" class="com.salesmanager.central.invoice.InvoiceDetailsAction" method="displayInvoiceDetails">
+			<result>invoicedetails.jsp</result>
+			<result name="error" type="redirectAction">invoicelist</result>
+		</action>
+
+
+		<action name="saveinvoice" class="com.salesmanager.central.invoice.InvoiceDetailsAction" method="saveInvoice">
+			<result name="success" type="redirectAction">
+            	<param name="actionName">showeditinvoice</param>
+            	<param name="order.orderId">${order.orderId}</param>
+       		</result>
+       		<result name="error">invoicedetails.jsp</result>
+		</action>
+		
+	    <action name="sendInvoiceEmail" class="com.salesmanager.central.invoice.InvoiceDetailsAction" method="sendInvoiceEmail">
+			<result name="success" type="redirectAction">
+            	<param name="actionName">showeditinvoice</param>
+            	<param name="order.orderId">${order.orderId}</param>
+       		</result>
+       		<result name="input">invoicedetails.jsp</result>
+       		<result name="error">invoicedetails.jsp</result>
+		</action>
+
+
+		<action name="deleteinvoice" class="com.salesmanager.central.invoice.InvoiceDetailsAction" method="deleteInvoice">
+			<result name="success" type="redirectAction">
+            	invoicelist
+       		</result>
+		</action>
+
+		<action name="receiveinvoicepayment" class="com.salesmanager.central.invoice.InvoiceDetailsAction" method="receiveInvoicePayment">
+			<result name="success">
+            	invoicepayment.jsp
+       		</result>
+		</action>
+
+		<action name="processinvoicepayment" class="com.salesmanager.central.invoice.InvoiceDetailsAction" method="processInvoicePayment">
+			<result name="success">
+            	invoicePaymentConfirmation.jsp
+       		</result>
+       		<result name="error">
+            	invoicepayment.jsp
+       		</result>
+		</action>
+
+
+
+
+
+
+
+
+	</package>
+
+</struts>

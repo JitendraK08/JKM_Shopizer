@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<instances>
+ <instance id="VASTCreateIndex.16" instanceOf="CAST_Oracle_Index">
+  <CAST_AST_Oracle_WithKeyCompression compressionType="1"/>
+  <CAST_SQL_Object version="10.2.0.4.0" owner="SHOPIZER" objectId="51798"/>
+  <CAST_AST_Oracle_StorageClause initialValue="65536" nextValue="" minExtentsValue="1" pctincreaseValue="" freeListsValue="" freeListGroupsValue="" bufferPoolRecycle="" bufferPoolKeep="" bufferPoolDefault="1"/>
+  <CAST_AST_Oracle_WithParallelClause parallelizationType="1"/>
+  <CAST_AST_Oracle_WithPhysicalAttributesClause initransValue="2" pctfreeValue="10"/>
+  <CAST_AST_Oracle_WithLogginClause loggingClause="1"/>
+  <CAST_AST_ANSISQL_WithUniqueness unique="1"/>
+  <CAST_Resolution_Identification resolutionName="UNQ_CCARD_KEY"/>
+  <CAST_Symbol_WithParent parent="p_Schema.1"/>
+  <CAST_ANSISQL_Index indexedObject="VASTCreateTable.5"/>
+  <POSITIONABLE POSITIONS="CAST_TargetSourceFile.119(1,1,2,-1)"/>
+ </instance>
+ <instance id="CAST_TargetSourceFile.119" instanceOf="CAST_TargetSourceFile">
+  <bookmark source="VASTCreateIndex.16.src"/>
+  <shell fullPath="VASTCreateIndex.16.src"/>
+ </instance>
+<instance id="CAST_AST_ANSISQL_IndexTableReference.16" instanceOf="CAST_AST_ANSISQL_IndexTableReference">
+ <CAST_AST_WithParent parentAST="VASTCreateIndex.16"/>
+ <CAST_AST_WithResolutionSymbolReference resolutionSymbol="VASTCreateTable.5"/>
+</instance>
+<instance id="CAST_AST_ANSISQL_SortedColumnReference.19" instanceOf="CAST_AST_ANSISQL_SortedColumnReference">
+ <CAST_AST_ANSISQL_WithOrder order="1"/>
+ <CAST_AST_ANSISQL_SortOrder ordering="1"/>
+ <CAST_Named nameAST="CENTRAL_CREDIT_CARDS_CODE"/>
+ <CAST_AST_WithParent parentAST="VASTCreateIndex.16"/>
+ <CAST_AST_WithResolutionSymbolReference resolutionSymbol="p_ColumnOfTable.38"/>
+</instance>
+</instances>

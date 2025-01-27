@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+<!DOCTYPE taglib PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.1//EN" "http://java.sun.com/j2ee/dtds/web-jsptaglibrary_1_1.dtd">
+<taglib>
+<tlibversion>1.0</tlibversion>
+<jspversion>1.1</jspversion>
+<shortname>sm</shortname>
+<uri></uri>
+
+
+
+<tag>
+	<name>contents</name>
+	<tagclass>com.salesmanager.core.util.www.tags.ContentsTag</tagclass>
+	<bodycontent>empty</bodycontent>
+	<attribute>
+		<name>merchantId</name>
+		<required>true</required>
+		<rtexprvalue>true</rtexprvalue>
+	</attribute>
+	<attribute>
+		<name>sectionId</name>
+		<required>true</required>
+	</attribute>
+</tag>
+
+
+<tag>
+	<name>content</name>
+	<tagclass>com.salesmanager.core.util.www.tags.ContentTag</tagclass>
+	<bodycontent>empty</bodycontent>
+	<attribute>
+		<name>merchantId</name>
+		<required>true</required>
+		<rtexprvalue>true</rtexprvalue>
+	</attribute>
+	<attribute>
+		<name>title</name>
+		<required>true</required>
+	</attribute>
+</tag>
+
+
+<tag>
+	<name>downloadUrl</name>
+	<tagclass>com.salesmanager.core.util.www.tags.OrderProductDownloadTag</tagclass>
+	<bodycontent>empty</bodycontent>
+	<attribute>
+	<name>productDownload</name>
+	<required>true</required>
+	<rtexprvalue>true</rtexprvalue>
+	</attribute>
+</tag>
+
+</taglib>
+

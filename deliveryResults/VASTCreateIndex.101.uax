@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<instances>
+ <instance id="VASTCreateIndex.101" instanceOf="CAST_Oracle_Index">
+  <CAST_AST_Oracle_WithKeyCompression compressionType="1"/>
+  <CAST_SQL_Object version="10.2.0.4.0" owner="SHOPIZER" objectId="51935"/>
+  <CAST_AST_Oracle_StorageClause initialValue="65536" nextValue="" minExtentsValue="1" pctincreaseValue="" freeListsValue="" freeListGroupsValue="" bufferPoolRecycle="" bufferPoolKeep="" bufferPoolDefault="1"/>
+  <CAST_AST_Oracle_WithParallelClause parallelizationType="1"/>
+  <CAST_AST_Oracle_WithPhysicalAttributesClause initransValue="2" pctfreeValue="10"/>
+  <CAST_AST_Oracle_WithLogginClause loggingClause="1"/>
+  <CAST_AST_ANSISQL_WithUniqueness unique="1"/>
+  <CAST_Resolution_Identification resolutionName="PRIMARY_33"/>
+  <CAST_Symbol_WithParent parent="p_Schema.1"/>
+  <CAST_ANSISQL_Index indexedObject="VASTCreateTable.44"/>
+  <POSITIONABLE POSITIONS="CAST_TargetSourceFile.204(1,1,2,-1)"/>
+ </instance>
+ <instance id="CAST_TargetSourceFile.204" instanceOf="CAST_TargetSourceFile">
+  <bookmark source="VASTCreateIndex.101.src"/>
+  <shell fullPath="VASTCreateIndex.101.src"/>
+ </instance>
+<instance id="CAST_AST_ANSISQL_IndexTableReference.101" instanceOf="CAST_AST_ANSISQL_IndexTableReference">
+ <CAST_AST_WithParent parentAST="VASTCreateIndex.101"/>
+ <CAST_AST_WithResolutionSymbolReference resolutionSymbol="VASTCreateTable.44"/>
+</instance>
+<instance id="CAST_AST_ANSISQL_SortedColumnReference.122" instanceOf="CAST_AST_ANSISQL_SortedColumnReference">
+ <CAST_AST_ANSISQL_WithOrder order="1"/>
+ <CAST_AST_ANSISQL_SortOrder ordering="1"/>
+ <CAST_Named nameAST="CONFIGURATION_MODULE"/>
+ <CAST_AST_WithParent parentAST="VASTCreateIndex.101"/>
+ <CAST_AST_WithResolutionSymbolReference resolutionSymbol="p_ColumnOfTable.384"/>
+</instance>
+<instance id="CAST_AST_ANSISQL_SortedColumnReference.123" instanceOf="CAST_AST_ANSISQL_SortedColumnReference">
+ <CAST_AST_ANSISQL_WithOrder order="2"/>
+ <CAST_AST_ANSISQL_SortOrder ordering="1"/>
+ <CAST_Named nameAST="CONFIGURATION_KEY"/>
+ <CAST_AST_WithParent parentAST="VASTCreateIndex.101"/>
+ <CAST_AST_WithResolutionSymbolReference resolutionSymbol="p_ColumnOfTable.385"/>
+</instance>
+<instance id="CAST_AST_ANSISQL_SortedColumnReference.124" instanceOf="CAST_AST_ANSISQL_SortedColumnReference">
+ <CAST_AST_ANSISQL_WithOrder order="3"/>
+ <CAST_AST_ANSISQL_SortOrder ordering="1"/>
+ <CAST_Named nameAST="COUNTRY_ISO_CODE_2"/>
+ <CAST_AST_WithParent parentAST="VASTCreateIndex.101"/>
+ <CAST_AST_WithResolutionSymbolReference resolutionSymbol="p_ColumnOfTable.386"/>
+</instance>
+</instances>

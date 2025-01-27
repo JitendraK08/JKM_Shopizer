@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<instances>
+ <instance id="VASTCreateSequence.12" instanceOf="CAST_Oracle_Sequence">
+  <CAST_SQL_Object version="10.2.0.4.0" owner="SHOPIZER" objectId="51774"/>
+  <CAST_ANSISQL_SequenceStartWith startWithNumber="1"/>
+  <CAST_ANSISQL_SequenceMinValues minNumber="1" defaultMin=""/>
+  <CAST_ANSISQL_SequenceCycleAndOrder cycleStatus="2" orderStatus="2"/>
+  <CAST_Resolution_Identification resolutionName="MERCHANT_USER_ROLE_DEF_ROLEID_"/>
+  <CAST_ANSISQL_SequenceCache cacheNumber="20"/>
+  <CAST_ANSISQL_SequenceMaxValues maxNumber="999999999999999999999999" defaultMax="999999999999999999999999"/>
+  <CAST_Symbol_WithParent parent="p_Schema.1"/>
+  <CAST_ANSISQL_SequenceIncrementBy incrementByNumber="1"/>
+  <POSITIONABLE POSITIONS="CAST_TargetSourceFile.100(1,1,8,-1)"/>
+ </instance>
+ <instance id="CAST_TargetSourceFile.100" instanceOf="CAST_TargetSourceFile">
+  <bookmark source="VASTCreateSequence.12.src"/>
+  <shell fullPath="VASTCreateSequence.12.src"/>
+ </instance>
+</instances>
